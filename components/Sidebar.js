@@ -18,7 +18,7 @@ const Sidebar = () => {
   const [isSmallScreen, setSmallScreen] = useState(false);
   const router = useRouter();
   useEffect(() => {
-    if (window.matchMedia("(max-width: 330px)").matches) {
+    if (window.matchMedia("(max-width: 430px)").matches) {
       setSmallScreen(false)
     } else { setSmallScreen(true); setToggleCollapse(false) }
   }, [isSmallScreen]);
