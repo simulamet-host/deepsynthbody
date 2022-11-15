@@ -1,2 +1,2 @@
 # deepsynthbody
-Official DeepSynthBody repository
+This is the next version of DeepSynthBody repository, 
