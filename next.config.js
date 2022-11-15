@@ -6,9 +6,8 @@ const nextConfig = {
   basePath: "/Testing-deep",
   assetPrefix: "/Testing-deep",
   images: {
-    loader: 'akamai',
-    path: '',
-  },
+    unoptimized: true
+}
 }
 
 module.exports = nextConfig
