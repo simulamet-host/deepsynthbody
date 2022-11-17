@@ -51,7 +51,7 @@ const Sidebar = () => {
       className={wrapperClasses}
       onMouseEnter={onMouseOver}
       onMouseLeave={onMouseOver}
-      style={{ transition: "width 300ms cubic-bezier(0.2, 0, 0, 1) 0s", backgroundColor: "#f15d22" }}
+      style={{ transition: "width 300ms cubic-bezier(0.2, 0, 0, 1) 0s", backgroundColor: "#07849f" }}
     >
       <div className="flex flex-col">
         <div className="flex items-center justify-between relative">

@@ -26,7 +26,7 @@ export default function SearchAndFilter() {
                 </div>
                 <input className="p-4 -ml-1 pl-10 w-full h-12 text-gray-900
                                   rounded-3xl border-2 border-gray-600
-                                  dark:placeholder-gray-400 border focus-visible:outline-none focus-visible:border-[#f15d22] grow"
+                dark:placeholder-gray-400 border focus-visible:outline-none focus-visible:border-[#07849f] grow"
                     placeholder="Search ..."
                     onChange={val => setValue(val.target.value)}
                     value={value}
