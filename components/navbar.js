@@ -1,10 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import {
-  Navbar,
   MobileNav,
   Typography,
-  Button,
   IconButton,
 } from "@material-tailwind/react";
 import Link from 'next/link'

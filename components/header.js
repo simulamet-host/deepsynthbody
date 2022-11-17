@@ -1,8 +1,4 @@
 import React from "react";
-// import header from "../assets/deepbody.svg";
-// import img from "../assets/image 1.png";
-// import img2 from "../assets/image3.png";
-// import img4 from "../assets/image4.png";
 import img5 from "../assets/heroimage.png";
 import Link from 'next/link'
 import Image from "next/image";
@@ -19,10 +15,10 @@ const Header = () => {
             </header>
           </div>
           <br />
-          <div class="flex justify-center">
+          <div className="flex justify-center">
             <button
               type="button"
-              class="inline-block px-7 py-3 bg-[#15CEF9] text-white font-medium text-sm leading-snug rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+              className="inline-block px-7 py-3 bg-[#15CEF9] text-white font-medium text-sm leading-snug rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
             >
               <Link href="/docs">Documentation</Link>
             </button>
