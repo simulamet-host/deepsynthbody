@@ -11,6 +11,10 @@
     "prettier": "prettier --write ."
   },
   "dependencies": {
+    "@material-tailwind/react": "^1.2.4",
+    "@mdx-js/loader": "^2.1.5",
+    "@mdx-js/react": "^2.1.5",
+    "@next/mdx": "^13.0.3",
     "@reduxjs/toolkit": "^1.9.0",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.7",

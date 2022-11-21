@@ -7,6 +7,8 @@ import { SearchContext } from '../components/context/search'
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from 'react'
 import { clearLinks } from "../slices/sidebarStatus";
+import Header from "../components/header";
+import { useRouter } from "next/router";
 
 
 export async function getStaticProps() {
@@ -46,6 +48,13 @@ export default function Home({ filesData }) {
                     </h2></div>
                     <SearchAndFilter />
                 </div>
+                {useRouter().pathname == "/" ? (
+            <header className="mb-8 py-2 justify-center">
+              <Header />
+            </header>
+          ) : (
+            false
+          )}
                 <DatasetGrid filesData={filesData} />
             </div>
         </SearchContext.Provider>
