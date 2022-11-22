@@ -3,7 +3,8 @@ import React from 'react'
 function index() {
   return (
     <div>
-<section className="bg-white dark:bg-gray-900">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfyhGECfg1MUn9I2xnyXphNz-cb8gkHJtK2QukIKQ68O3V1tw/viewform?embedded=true" width="1000" height="1100" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+{/* <section className="bg-white dark:bg-gray-900">
   <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
       <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Help Us With Feedback</h2>
       <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Got a sugesstion? Want to contribute towards models? Want to Report a malfunction? Let us know.</p>
@@ -23,7 +24,7 @@ function index() {
           <button type="submit" className="py-3 px-5  font-medium text-center text-white rounded-lg bg-primary sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send message</button>
       </form>
   </div>
-</section>
+</section> */}
     </div>
   )
 }
