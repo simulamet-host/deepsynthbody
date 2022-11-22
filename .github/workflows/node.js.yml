@@ -30,7 +30,6 @@ jobs:
     - run: npm run build
     - run: npm run export
     - run: touch ./out/.nojekyll
-    - run: mv ./out/404/index.html ./out/404.html
     
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4.2.5
