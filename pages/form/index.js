@@ -3,7 +3,7 @@ import React from 'react'
 function index() {
   return (
     <div>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfyhGECfg1MUn9I2xnyXphNz-cb8gkHJtK2QukIKQ68O3V1tw/viewform?embedded=true" width="1000" height="1100" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfyhGECfg1MUn9I2xnyXphNz-cb8gkHJtK2QukIKQ68O3V1tw/viewform?embedded=true" width="1000" height="1100" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
 {/* <section className="bg-white dark:bg-gray-900">
   <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
       <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Help Us With Feedback</h2>
