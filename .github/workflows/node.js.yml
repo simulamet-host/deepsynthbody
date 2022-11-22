@@ -30,7 +30,6 @@ jobs:
     - run: npm run build
     - run: npm run export
     - run: touch ./out/.nojekyll
-    - name: Move 404 page to root directory
     - run: mv ./out/404/index.html ./out/404.html
     
     - name: Deploy 🚀
