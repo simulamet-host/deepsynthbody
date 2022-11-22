@@ -56,19 +56,20 @@ export default function Home({ filesData, images, homeMD }) {
         <SearchContext.Provider value={{ value, setValue }}>
 
             <div>
-                <div className="mb-14  text-center">
-                    <div className='mt- -mb-2'><h2 className="text-2xl font-medium text-greyish">
-                    {homeMD.SearchHeading}
-                    </h2></div>
-                    <SearchAndFilter />
-                </div>
+
                 {useRouter().pathname == "/" ? (
-                    <header className="mb-8 py-2 justify-center">
+                    <header className="mb- py- justify-center">
                         <Header />
                     </header>
                 ) : (
                     false
                 )}
+                                <div className="mb-12 mt-7 text-center">
+                    <div className='-mb-2'><h2 className="text-2xl font-medium text-greyish">
+                    {homeMD.SearchHeading}
+                    </h2></div>
+                    <SearchAndFilter />
+                </div>
                 <DatasetGrid filesData={filesData} images={images} />
             </div>
         </SearchContext.Provider>
