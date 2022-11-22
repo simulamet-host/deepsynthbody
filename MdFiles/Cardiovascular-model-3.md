@@ -1,9 +1,9 @@
 ---
-title: 'CardioVascular Model 3'
-category: 'CardioVascular'
-# subcategory: 'Sub CardioVascular'
-# subsubcategory: 'Subsub CardioVascular'
-desc: 'Some description of CardioVascular Model 3.'
+title: 'Cardiovascular Model 3'
+category: 'Cardiovascular'
+# subcategory: 'Sub Cardiovascular'
+# subsubcategory: 'Subsub Cardiovascular'
+desc: 'Some description of Cardiovascular Model 3.'
 thumbnail: https://static8.depositphotos.com/1229718/862/i/600/depositphotos_8627248-stock-photo-human-torso-with-red-heart.jpg
 publication: https://ieeexplore.ieee.org/abstract/document/9462062
 show: true

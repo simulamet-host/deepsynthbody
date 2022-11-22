@@ -63,16 +63,21 @@ export async function getStaticProps({ params: { subcategory } }) {
             frontmatter,
         }
     })
+    //Reading the heading or description from subcategory.md
+    const readHome = fs.readFileSync(`HeadingOrDesc/subcategories.md`, 'utf-8')
+    const { data: subcategoryData } = matter(readHome)
+    const subcategoryMD = subcategoryData
     return {
         props: {
             filesData,
-            subcategory
+            subcategory,
+            subcategoryMD
         }
     }
 }
 
 
-export default function CategoryPage({ filesData, subcategory }) {
+export default function CategoryPage({ filesData, subcategory, subcategoryMD }) {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(levelOneName(subcategory))
@@ -104,7 +109,7 @@ export default function CategoryPage({ filesData, subcategory }) {
 
             <div className="mb-12  text-center">
                 <div className='-mb-2'><h2 className="text-2xl font-medium text-greyish">
-                    Choose Your Desired Option
+                    {subcategoryMD.SearchHeading}
                 </h2></div>
                 <SearchAndFilter />
 
@@ -120,12 +125,16 @@ export default function CategoryPage({ filesData, subcategory }) {
                 })}
             {subcategoryExists ? <div className="text-center">
                 <h1 className=" font-semibold text-center mb-3 -mt-3 text-4xl">
-                    Subcategories of {useRouter().query.subcategory}
+                    {subcategoryMD.SubcategoryHeading}{" "}
+                    {useRouter().query.subcategory} 
                 </h1>
+                <h2 className="text-2xl font-medium text-greyish">
+                    {subcategoryMD.SubcategoryDesc}
+                </h2>
             </div> : false}
             {/* Ending Conditional Rendering of Subcategories heading */}
 
-            <div className="grid grid-cols-1 p-4 md:grid-cols-2 md:p-0 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="grid grid-cols-1 mt-3 p-4 md:grid-cols-2 md:p-0 lg:grid-cols-3 xl:grid-cols-4">
                 {unique.filter(item => item.frontmatter.show == true)
                     .filter(props => props.frontmatter.category == subcategory)
                     .filter(item => searchTitle(item, value)).map(props => {
@@ -155,12 +164,16 @@ export default function CategoryPage({ filesData, subcategory }) {
             {subcategoryModelsExists ?
                 <div className="text-center">
                     <h1 className=" font-semibold text-center mb-2 mt-5 text-4xl">
-                        Models of {useRouter().query.subcategory}
+                        {subcategoryMD.ModelsHeading}{" "}
+                       {useRouter().query.subcategory} 
                     </h1>
+                    <h2 className="text-2xl font-medium text-greyish">
+                    {subcategoryMD.ModelsDesc}
+                </h2>
                 </div> : false}
             {/* Ending Conditional Rendering of models heading in Subcategories */}
 
-            <div className="grid grid-cols-1 p-4 md:grid-cols-2 md:p-0 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="grid grid-cols-1 mt-3 p-4 md:grid-cols-2 md:p-0 lg:grid-cols-3 xl:grid-cols-4">
                 {filesData.filter(item => item.frontmatter.show == true)
                     .filter(props => props.frontmatter.category == subcategory)
                     .filter(item => searchTitle(item, value)).map(props => {

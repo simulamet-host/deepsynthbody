@@ -1,9 +1,9 @@
 ---
-title: 'CardioVascular Model 2'
-category: 'CardioVascular'
-# subcategory: 'Sub CardioVascular'
-# subsubcategory: 'Subsub CardioVascular'
-desc: 'Some description of CardioVascular Model 2.'
+title: 'Cardiovascular Model 2'
+category: 'Cardiovascular'
+# subcategory: 'Sub Cardiovascular'
+# subsubcategory: 'Subsub Cardiovascular'
+desc: 'Some description of Cardiovascular Model 2.'
 thumbnail: https://st.depositphotos.com/1000423/3062/i/600/depositphotos_30620391-stock-photo-human-heart-beats.jpg
 publication: https://ieeexplore.ieee.org/abstract/document/9462062
 show: true

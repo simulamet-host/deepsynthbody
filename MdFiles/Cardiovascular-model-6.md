@@ -1,9 +1,9 @@
 ---
-title: 'CardioVascular Model 6'
-category: 'CardioVascular'
-subcategory: 'Sub CardioVascular'
-# subsubcategory: 'Subsub CardioVascular'
-desc: 'Some description of CardioVascular Model 6.'
+title: 'Cardiovascular Model 6'
+category: 'Cardiovascular'
+subcategory: 'Sub Cardiovascular'
+# subsubcategory: 'Subsub Cardiovascular'
+desc: 'Some description of Cardiovascular Model 6.'
 thumbnail: https://cdn.pixabay.com/photo/2020/04/22/19/29/heart-5079717__480.png
 publication: https://ieeexplore.ieee.org/abstract/document/9462062
 show: true
