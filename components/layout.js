@@ -3,8 +3,11 @@ import { FaGithub } from 'react-icons/fa'
 import { useRouter } from 'next/router'
 import Sidebar from './Sidebar'
 import Navbar from './navbar'
+import { useSelector } from "react-redux";
 
 export default function Layout({ children }) {
+    const footer = useSelector((state) => state.myFooter.value);
+
     return (
         <div className="flex h-screen flex-col">
             <Navbar />
@@ -35,7 +38,7 @@ export default function Layout({ children }) {
                     href="https://github.com/simula/deepsynthbody"
                 >
                     <span className="mr-2">
-                        Contribute By Uploading Your Model
+                        {footer}
                     </span>
                     <span>
                         <FaGithub size="1.5rem" />

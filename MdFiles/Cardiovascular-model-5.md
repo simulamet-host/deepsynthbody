@@ -1,9 +1,9 @@
 ---
-title: 'CardioVascular Model 5'
-category: 'CardioVascular'
-subcategory: 'Sub CardioVascular'
-subsubcategory: 'Subsub CardioVascular'
-desc: 'Some description of CardioVascular Model 5.'
+title: 'Cardiovascular Model 5'
+category: 'Cardiovascular'
+subcategory: 'Sub Cardiovascular'
+subsubcategory: 'Subsub Cardiovascular'
+desc: 'Some description of Cardiovascular Model 5.'
 thumbnail: https://st3.depositphotos.com/1006472/15774/i/600/depositphotos_157743458-stock-photo-adult-male-with-heart-burn.jpg
 publication: https://ieeexplore.ieee.org/abstract/document/9462062
 show: true
