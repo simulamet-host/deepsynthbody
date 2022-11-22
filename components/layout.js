@@ -35,7 +35,7 @@ export default function Layout({ children }) {
             <footer className="sticky top-[100vh] flex justify-center bg-primary py-4 ">
                 <a
                     className="flex"
-                    href="https://github.com/simula/deepsynthbody"
+                    href="https://github.com/simulamet-host/deepsynthbody"
                 >
                     <span className="mr-2">
                         {footer}
