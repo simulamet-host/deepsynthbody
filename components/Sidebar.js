@@ -32,7 +32,7 @@ const Sidebar = () => {
   );
 
   const collapseIconClasses = classNames(
-    "pl- rounded bg-light-lighter right-0",
+    " rounded bg-light-lighter right-0",
     {
       "rotate-180": toggleCollapse,
     }
