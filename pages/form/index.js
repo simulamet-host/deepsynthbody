@@ -28,7 +28,11 @@ function index() {
 //       </form>
 //   </div>
 // </section>
+<<<<<<< HEAD
 //     </div>
+=======
+    // </div>
+>>>>>>> 17d70f868e6bcd8d2a8c4c1a0e85495dba3f6979
         <div>
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSfVPZNfPxVwDwRPBXP9jwgS7UrWu4v7oLyWXlrpkA-dh4rfTA/viewform?embedded=true"
