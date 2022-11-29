@@ -9,14 +9,6 @@ import 'swiper/css/autoplay';
 import Card from './carouselCards'
 
 export default function Header ({sliderData}){
-  var array = [{ category: 'Cardiovascular', thumbnail: '/deepsynthbody/imagesOfCategories/Cardiovascular.svg' },
-{ category: 'Endocrine', thumbnail: '/deepsynthbody/imagesOfCategories/Endocrine.jpeg' },
-{ category: 'Integumentary', thumbnail: '/deepsynthbody/imagesOfCategories/Integumentary.svg' },
-{ category: 'Lymphatic', thumbnail: '/deepsynthbody/imagesOfCategories/Lymphatic.jpeg' },
-{ category: 'Muscular', thumbnail: '/deepsynthbody/imagesOfCategories/Muscular.jpeg' },
-{ category: 'Nervous', thumbnail: '/deepsynthbody/imagesOfCategories/Nervous.jpeg' },
-{ category: 'Urinary', thumbnail: '/deepsynthbody/imagesOfCategories/Urinary.jpeg' }]
-
   return (
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}
