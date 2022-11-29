@@ -10,3 +10,32 @@
       @apply text-xl  font-semibold;
     }
   }  
+  .swiper-button-next { color: #07849f !important; }
+  .swiper-button-prev { color: #07849f !important; }
+
+  .swiper-wrapper{
+    width: 80px !important;
+  } 
+  
+  @media screen and (min-width: 640px) {
+    .swiper-wrapper {
+      width: 640px !important;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .swiper-wrapper {
+      width: 600px !important;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .swiper-wrapper {
+      width: 600px !important;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .swiper-wrapper {
+      width: 50% !important;
+    }
+  }

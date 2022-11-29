@@ -70,7 +70,7 @@ const NavBar = () => {
 
   return (
     <div className=" bg-white px-2 sm:px-4 py-2.5 shadow-lg">
-      <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
+      <div className="container flex items-center justify-between text-blue-gray-900">
         <Link href="/">
           <h1 className="mr-4 cursor-pointer py-1.5 font-bold text-primary"> 
           DeepSynthBody</h1>

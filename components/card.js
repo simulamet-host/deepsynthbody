@@ -25,7 +25,7 @@ export default function Card(props) {
                             <img
                                 alt={props.title}
                                 src={`${props.thumbnail}`}
-                                className="min-h-5/6 ml-6 object-fill  aspect-square rounded-full w-5/6"
+                                className="min-h-5/6 ml-6 object-fill border-2 border-cyan-500 aspect-square rounded-full w-5/6"
                             />
                         </div>
                             <div className="text-center">

@@ -9,11 +9,11 @@ export default function Layout({ children }) {
     const footer = useSelector((state) => state.myFooter.value);
 
     return (
-        <div className="flex h-screen flex-col">
-            <Navbar />
+        <div  className="flex h-screen flex-col">
+            <Navbar  />
             <br />
 
-            {/* 
+{/*             
             <header className="mb-8 py-2 justify-center bg-primary border border-orange-800 shadow-lg">
                 <div className='text-center'>
                     <Link href="/">
@@ -25,9 +25,9 @@ export default function Layout({ children }) {
                 </div>
             </header> */}
 
-            <div className=" flex flex-row justify-start mt-2">
+            <div className="flex mt-2">
                 <Sidebar />
-                <div className=" h-900 mx-auto max-w-7xl flex-1 ml-10">
+                <div style={{ width: "60rem"}} className="h-900 flex-1 ">
                     {children}
                 </div>
             </div>

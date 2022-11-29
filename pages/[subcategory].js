@@ -63,28 +63,50 @@ export async function getStaticProps({ params: { subcategory } }) {
             frontmatter,
         }
     })
-    //Reading the heading or description from subcategory.md
-    const readHome = fs.readFileSync(`HeadingOrDesc/subcategories.md`, 'utf-8')
-    const { data: subcategoryData } = matter(readHome)
-    const subcategoryMD = subcategoryData
+    //Reading the search heading from HeadingOrDesc/subcategory/search.md
+    const readSearchHeading = fs.readFileSync(`HeadingOrDesc/subcategory/search.md`, 'utf-8')
+    const { data: subcategorySearchHeading } = matter(readSearchHeading)
+    const subcategorySearchHeadingMD = subcategorySearchHeading
+    //Getting the subcategory headings from subCategoryHeadings.md
+    const readsubCatHeading = fs.readFileSync(`HeadingOrDesc/subcategory/subCategoryHeadings.md`, 'utf-8')
+    const { data: subcategoryHeadings } = matter(readsubCatHeading)
+    const subcategoryHeadingsMD = subcategoryHeadings
+    //Getting the subcategory model headings from HeadingOrDesc/subcategory/modelsHeadings.md
+    const readsubCatModelHeading = fs.readFileSync(`HeadingOrDesc/subcategory/modelsHeadings.md`, 'utf-8')
+    const { data: subcategoryModelHeadings } = matter(readsubCatModelHeading)
+    const subcategoryModelHeadingsMD = subcategoryModelHeadings
+    //Getting the subcategory heading´s description from subCategoryDesc.md
+    const readsubCatDesc = fs.readFileSync(`HeadingOrDesc/subcategory/subCategoryDesc.md`, 'utf-8')
+    const { data: subcategoryDesc } = matter(readsubCatDesc)
+    const subcategoryDescMD = subcategoryDesc
+    //Getting the subcategory model´s desc from HeadingOrDesc/subcategory/modelsDesc.md
+    const readsubCatModelDesc = fs.readFileSync(`HeadingOrDesc/subcategory/modelsDesc.md`, 'utf-8')
+    const { data: subcategoryModelDesc } = matter(readsubCatModelDesc)
+    const subcategoryModelDescMD = subcategoryModelDesc
     return {
         props: {
             filesData,
             subcategory,
-            subcategoryMD
+            subcategorySearchHeadingMD,
+            subcategoryHeadingsMD,
+            subcategoryModelHeadingsMD,
+            subcategoryDescMD,
+            subcategoryModelDescMD
         }
     }
 }
 
 
-export default function CategoryPage({ filesData, subcategory, subcategoryMD }) {
+export default function CategoryPage({ filesData, subcategory, subcategorySearchHeadingMD,
+    subcategoryHeadingsMD, subcategoryModelHeadingsMD,
+    subcategoryDescMD, subcategoryModelDescMD }) {
+
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(levelOneName(subcategory))
         dispatch(clearSecondThirdLink())
         dispatch(Subcategory())
     })
-
 
     const [value, setValue] = useState('');
     const router = useRouter();
@@ -104,12 +126,12 @@ export default function CategoryPage({ filesData, subcategory, subcategoryMD }) 
     return (
         <SearchContext.Provider value={{ value, setValue }}>
             <div>
-                <h1 className=" font-semibold text-center mb-3 -mt-3 text-4xl">{useRouter().query.subcategory}</h1>
+                <h1 className="px-1 font-semibold text-center mb-3 -mt-3 text-4xl">{useRouter().query.subcategory}</h1>
             </div>
 
-            <div className="mb-12  text-center">
+            <div className="mb-12 px-1 text-center">
                 <div className='-mb-2'><h2 className="text-2xl font-medium text-greyish">
-                    {subcategoryMD.SearchHeading}
+                    {subcategorySearchHeadingMD[subcategory]}
                 </h2></div>
                 <SearchAndFilter />
 
@@ -123,13 +145,15 @@ export default function CategoryPage({ filesData, subcategory, subcategoryMD }) 
                         subcategoryExists = true
                     }
                 })}
-            {subcategoryExists ? <div className="text-center">
+            {subcategoryExists ? <div className="px-1 text-center">
                 <h1 className=" font-semibold text-center mb-3 -mt-3 text-4xl">
-                    {subcategoryMD.SubcategoryHeading}{" "}
-                    {useRouter().query.subcategory} 
+                    {subcategoryHeadingsMD[subcategory]}
+                    {/* {subcategoryMD.SubcategoryHeading}{" "}
+                    {useRouter().query.subcategory}  */}
                 </h1>
                 <h2 className="text-2xl font-medium text-greyish">
-                    {subcategoryMD.SubcategoryDesc}
+                    {subcategoryDescMD[subcategory]}
+                    {/* {subcategoryMD.SubcategoryDesc} */}
                 </h2>
             </div> : false}
             {/* Ending Conditional Rendering of Subcategories heading */}
@@ -162,14 +186,15 @@ export default function CategoryPage({ filesData, subcategory, subcategoryMD }) 
                     }
                 })}
             {subcategoryModelsExists ?
-                <div className="text-center">
+                <div className="px-1 text-center">
                     <h1 className=" font-semibold text-center mb-2 mt-5 text-4xl">
-                        {subcategoryMD.ModelsHeading}{" "}
-                       {useRouter().query.subcategory} 
+                        {subcategoryModelHeadingsMD[subcategory]}
+                        {/* {subcategoryMD.ModelsHeading}{" "}
+                       {useRouter().query.subcategory}  */}
                     </h1>
                     <h2 className="text-2xl font-medium text-greyish">
-                    {subcategoryMD.ModelsDesc}
-                </h2>
+                        {subcategoryModelDescMD[subcategory]}
+                    </h2>
                 </div> : false}
             {/* Ending Conditional Rendering of models heading in Subcategories */}
 

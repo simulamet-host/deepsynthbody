@@ -59,20 +59,31 @@ export async function getStaticProps({ params: { subsubsubcategory } }) {
             frontmatter,
         }
     })
-          //Reading the heading or description from subsubcategory.md
-          const readHome = fs.readFileSync(`HeadingOrDesc/subsubsubcategories.md`, 'utf-8')
-          const { data: subsubsubcategoryData } = matter(readHome)
-          const subsubsubcategoryMD = subsubsubcategoryData
+    //Getting the thirdlevel page search heading
+    const readThirdLevelSearch = fs.readFileSync(`HeadingOrDesc/thirdLevelOfCategories/search.md`, 'utf-8')
+    const { data: thirdLevelSearch } = matter(readThirdLevelSearch)
+    const thirdLevelSearchMD = thirdLevelSearch
+    //Getting the thirdlevel page model headings
+    const readThirdLevelModelHeading = fs.readFileSync(`HeadingOrDesc/thirdLevelOfCategories/modelsHeadings.md`, 'utf-8')
+    const { data: thirdLevelModelHeadings } = matter(readThirdLevelModelHeading)
+    const thirdLevelModelHeadingsMD = thirdLevelModelHeadings
+    //Getting the third level model´s desc
+    const readThirdLevelModelDescription = fs.readFileSync(`HeadingOrDesc/thirdLevelOfCategories/modelsDesc.md`, 'utf-8')
+    const { data: thirdLevelModelDescription } = matter(readThirdLevelModelDescription)
+    const thirdLevelModelDescriptionMD = thirdLevelModelDescription
     return {
         props: {
             filesData,
             subsubsubcategory,
-            subsubsubcategoryMD
+            thirdLevelSearchMD,
+            thirdLevelModelHeadingsMD,
+            thirdLevelModelDescriptionMD
         }
     }
 }
 
-export default function SubsubsubCategoryPage({ filesData, subsubsubcategory, subsubsubcategoryMD }) {
+export default function SubsubsubCategoryPage({ filesData, subsubsubcategory, subsubsubcategoryMD,
+    thirdLevelModelHeadingsMD, thirdLevelModelDescriptionMD, thirdLevelSearchMD }) {
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -104,7 +115,7 @@ export default function SubsubsubCategoryPage({ filesData, subsubsubcategory, su
             </div>
             <div className="mb-12  text-center">
                 <div className='-mb-2'><h2 className="text-2xl font-medium text-greyish">
-                {subsubsubcategoryMD.SearchHeading}
+                    {thirdLevelSearchMD[subsubsubcategory]}
                 </h2></div>
                 <SearchAndFilter />
 
@@ -118,11 +129,11 @@ export default function SubsubsubCategoryPage({ filesData, subsubsubcategory, su
                     }
                 })}
             {subsubsubcategoryExists ? <div className="text-center">
-            <h1 className=" font-semibold text-center mb-2 mt-5 text-4xl">
-                        {subsubsubcategoryMD.ModelsHeading}{" "}
-                       {useRouter().query.subsubsubcategory} 
-                    </h1>
-                    <h2 className="text-2xl font-medium text-greyish">
+                <h1 className=" font-semibold text-center mb-2 mt-5 text-4xl">
+                    {subsubsubcategoryMD.ModelsHeading}{" "}
+                    {useRouter().query.subsubsubcategory}
+                </h1>
+                <h2 className="text-2xl font-medium text-greyish">
                     {subsubsubcategoryMD.ModelsDesc}
                 </h2>
             </div> : false}
@@ -158,13 +169,16 @@ export default function SubsubsubCategoryPage({ filesData, subsubsubcategory, su
                         subsubsubcategoryModelsExists = true
                     }
                 })}
-            {subsubsubcategoryModelsExists ? <div className="text-center">
-            <h1 className=" font-semibold text-center mb-2 mt-5 text-4xl">
-                        {subsubsubcategoryMD.ModelsHeading}{" "}
-                       {useRouter().query.subsubsubcategory} 
-                    </h1>
-                    <h2 className="text-2xl font-medium text-greyish">
-                    {subsubsubcategoryMD.ModelsDesc}
+            {subsubsubcategoryModelsExists ? <div className="text-center px-1">
+                <h1 className=" font-semibold text-center mb-2 mt-5 text-4xl">
+                    {thirdLevelModelHeadingsMD[subsubsubcategory]}
+
+                    {/* {subsubsubcategoryMD.ModelsHeading}{" "}
+                    {useRouter().query.subsubsubcategory} */}
+                </h1>
+                <h2 className="text-2xl font-medium text-greyish">
+                    {thirdLevelModelDescriptionMD[subsubsubcategory]}
+                    {/* {subsubsubcategoryMD.ModelsDesc} */}
                 </h2>
             </div> : false}
             {/* Ending Conditional Rendering of models heading in Subcategories */}

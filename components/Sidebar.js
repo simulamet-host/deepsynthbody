@@ -26,7 +26,7 @@ const Sidebar = () => {
   const wrapperClasses = classNames(
     "-my-8 pl-2 bg-light min-h-screen flex justify-between flex-col",
     {
-      ["w-80"]: !toggleCollapse,
+      ["w-[15rem]"]: !toggleCollapse,
       ["w-20"]: toggleCollapse,
     }
   );
