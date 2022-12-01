@@ -32,7 +32,7 @@ export async function getStaticProps({ params: { detail } }) {
 export default function detail({ frontmatter, content }) {
     const md = markdownIt({ html: true })
     return (
-        <div className="mx-auto px-8">
+        <div className=" px-8">
 
             <div className="mb-8 text-center">
                 <h1 className="mb-2 text-4xl">{frontmatter.title}</h1>

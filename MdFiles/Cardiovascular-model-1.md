@@ -1,9 +1,9 @@
 ---
-title: 'CardioVascular Model 1'
-category: 'CardioVascular'
-subcategory: 'Sub CardioVascular1'
-# subsubcategory: 'Subsub CardioVascular'
-desc: 'Some description of CardioVascular Model 1.'
+title: 'Cardiovascular Model 1'
+category: 'Cardiovascular'
+subcategory: 'Sub Cardiovascular1'
+# subsubcategory: 'Subsub Cardiovascular'
+desc: 'Some description of Cardiovascular Model 1.'
 thumbnail: https://st2.depositphotos.com/3413075/11224/i/450/depositphotos_112248656-stock-photo-human-heart-anatomy.jpg
 publication: https://ieeexplore.ieee.org/abstract/document/9462062
 show: true

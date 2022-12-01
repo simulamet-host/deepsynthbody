@@ -1,7 +1,9 @@
 .container {
   padding: 0 2rem;
 }
-
+.img {
+  width: 100%;
+}
 .main {
   min-height: 100vh;
   padding: 4rem 0;

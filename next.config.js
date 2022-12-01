@@ -13,8 +13,8 @@ pageExtensions: ['js', 'jsx', 'md', 'mdx'],
 reactStrictMode: true,
 swcMinify: true,
 trailingSlash: true,
-basePath: ghPages? '/Testing-deep/' : '',
-assetPrefix: ghPages ? '/Testing-deep/' : '',
+basePath: ghPages? '/deepsynthbody' : '/deepsynthbody',
+assetPrefix: ghPages ? '/deepsynthbody' : '/deepsynthbody',
 images: {
       unoptimized: true
  }

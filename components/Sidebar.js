@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import React, { useState, useMemo, useEffect, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Subcategory, Subsubcategory, BacktoModels } from "../slices/sidebarStatus";
-import simulaLogo from "./icons/simulaLogo.svg";
+import whiteLogo from "./icons/whiteLogo.png";
 import Image from 'next/image'
 import {
   CollapsIcon,
@@ -26,7 +26,7 @@ const Sidebar = () => {
   const wrapperClasses = classNames(
     "-my-8 pl-2 bg-light min-h-screen flex justify-between flex-col",
     {
-      ["w-80"]: !toggleCollapse,
+      ["w-[15rem]"]: !toggleCollapse,
       ["w-20"]: toggleCollapse,
     }
   );
@@ -55,9 +55,9 @@ const Sidebar = () => {
     >
       <div className="flex flex-col">
         <div className="flex items-center justify-between relative">
-          <div className="flex items-center mx-auto py-5 gap-4">
-            <div className="pr-2"><Image src={simulaLogo} width={90}
-              height={90} alt="Your SVG" /></div>
+          <div className="flex items-center mx-auto pt-5 gap-4">
+            <div className="pr-"><Image src={whiteLogo} width={110}
+              height={110} alt="Navigation" /></div>
           </div>
           <div>
             {isSmallScreen && (

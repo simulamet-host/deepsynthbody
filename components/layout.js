@@ -3,14 +3,17 @@ import { FaGithub } from 'react-icons/fa'
 import { useRouter } from 'next/router'
 import Sidebar from './Sidebar'
 import Navbar from './navbar'
+import { useSelector } from "react-redux";
 
 export default function Layout({ children }) {
+    const footer = useSelector((state) => state.myFooter.value);
+
     return (
-        <div className="flex h-screen flex-col">
-            <Navbar />
+        <div  className="flex h-screen flex-col">
+            <Navbar  />
             <br />
 
-            {/* 
+{/*             
             <header className="mb-8 py-2 justify-center bg-primary border border-orange-800 shadow-lg">
                 <div className='text-center'>
                     <Link href="/">
@@ -22,9 +25,9 @@ export default function Layout({ children }) {
                 </div>
             </header> */}
 
-            <div className=" flex flex-row justify-start mt-2">
+            <div className="flex mt-2">
                 <Sidebar />
-                <div className=" h-900 mx-auto max-w-7xl flex-1 ml-10">
+                <div style={{ width: "60rem"}} className="h-900 flex-1 ">
                     {children}
                 </div>
             </div>
@@ -32,10 +35,10 @@ export default function Layout({ children }) {
             <footer className="sticky top-[100vh] flex justify-center bg-primary py-4 ">
                 <a
                     className="flex"
-                    href="https://github.com/simula/deepsynthbody"
+                    href="https://github.com/simulamet-host/deepsynthbody"
                 >
                     <span className="mr-2">
-                        Contribute By Uploading Your Model
+                        {footer}
                     </span>
                     <span>
                         <FaGithub size="1.5rem" />

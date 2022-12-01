@@ -8,14 +8,14 @@ import { useRouter } from 'next/router';
 import { useContext, useState, useEffect } from 'react'
 import { SearchContext } from '../../components/context/search'
 import SearchAndFilter from '../../components/search'
-import { useDispatch, useSelector,  } from "react-redux";
+import { useDispatch, useSelector, } from "react-redux";
 import { Subcategory, Subsubcategory, BacktoModels, clearThirdLink, levelTwoName } from "../../slices/sidebarStatus";
 
 const searchTitle = (item, toBeChecked) => {
     return (
         item.frontmatter.subsubcategory ? searchByTitle(item.frontmatter.title, toBeChecked) ||
-        searchBySubSubCatergory(item.frontmatter.subsubcategory, toBeChecked) : 
-        searchByTitle(item.frontmatter.title, toBeChecked)
+            searchBySubSubCatergory(item.frontmatter.subsubcategory, toBeChecked) :
+            searchByTitle(item.frontmatter.title, toBeChecked)
     )
 }
 const searchByTitle = (title, toBeChecked) => {
@@ -64,23 +64,48 @@ export async function getStaticProps({ params: { subsubcategory } }) {
             frontmatter,
         }
     })
+  //Reading the search heading from HeadingOrDesc/subcategory/search.md
+  const readSearchHeading = fs.readFileSync(`HeadingOrDesc/subsubcategory/search.md`, 'utf-8')
+  const { data: subcategorySearchHeading } = matter(readSearchHeading)
+  const subcategorySearchHeadingMD = subcategorySearchHeading
+    //Getting the subsubcategory headings
+    const readsubsubCatHeading = fs.readFileSync(`HeadingOrDesc/subsubcategory/subsubCategoryHeadings.md`, 'utf-8')
+    const { data: subsubcategoryHeadings } = matter(readsubsubCatHeading)
+    const subsubcategoryHeadingsMD = subsubcategoryHeadings
+    //Getting the subsubcategory model headings
+    const readsubsubCatModelHeading = fs.readFileSync(`HeadingOrDesc/subsubcategory/modelsHeadings.md`, 'utf-8')
+    const { data: subsubcategoryModelHeadings } = matter(readsubsubCatModelHeading)
+    const subsubcategoryModelHeadingsMD = subsubcategoryModelHeadings
+    //Getting the subsubcategory heading´s description
+    const readsubsubCatDesc = fs.readFileSync(`HeadingOrDesc/subsubcategory/subsubCategoryDesc.md`, 'utf-8')
+    const { data: subsubcategoryDesc } = matter(readsubsubCatDesc)
+    const subsubcategoryDescMD = subsubcategoryDesc
+    //Getting the subsubcategory model´s desc
+    const readsubsubCatModelDesc = fs.readFileSync(`HeadingOrDesc/subsubcategory/modelsDesc.md`, 'utf-8')
+    const { data: subsubcategoryModelDesc } = matter(readsubsubCatModelDesc)
+    const subsubcategoryModelDescMD = subsubcategoryModelDesc
     return {
         props: {
             filesData,
-            subsubcategory
+            subsubcategory,
+            subcategorySearchHeadingMD,
+            subsubcategoryHeadingsMD,
+            subsubcategoryModelHeadingsMD,
+            subsubcategoryDescMD,
+            subsubcategoryModelDescMD
         }
     }
 }
 
 
-export default function SubsubCategoryPage({ filesData, subsubcategory }) {
+export default function SubsubCategoryPage({ filesData, subsubcategory, subcategorySearchHeadingMD,
+    subsubcategoryHeadingsMD, subsubcategoryModelHeadingsMD, subsubcategoryDescMD, subsubcategoryModelDescMD }) {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(levelTwoName(subsubcategory))
         dispatch(clearThirdLink())
         dispatch(Subsubcategory())
     })
-
 
     const [value, setValue] = useState('');
     const router = useRouter();
@@ -97,16 +122,17 @@ export default function SubsubCategoryPage({ filesData, subsubcategory }) {
     //Finish Filtering out records and avoiding one category to appear more time 
     let subsubcategoryExists = false;
     let subsubcategoryModelsExists = false;
+
     return (
         <SearchContext.Provider value={{ value, setValue }}>
             <div>
-                <h1 className=" font-semibold text-center mb-3 -mt-3 text-4xl">{useRouter().query.subcategory}</h1>
+                <h1 className="px-1 font-semibold text-center mb-3 -mt-3 text-4xl">{useRouter().query.subcategory}</h1>
             </div>
 
-            <div className="mb-12  text-center">
+            <div className="mb-12 px-1 text-center">
                 <div className='-mb-2'><h2 className="text-2xl font-medium text-greyish">
-                    Choose Your Desired Model
-                </h2></div>
+                {subcategorySearchHeadingMD[subsubcategory]}
+                                </h2></div>
                 <SearchAndFilter />
 
             </div>
@@ -118,14 +144,20 @@ export default function SubsubCategoryPage({ filesData, subsubcategory }) {
                         subsubcategoryExists = true
                     }
                 })}
-            {subsubcategoryExists ? <div className="text-center">
-                <h1 className=" font-semibold text-center mb-3  text-4xl">
-                Subsubcategories of {useRouter().query.subsubcategory}
+            {subsubcategoryExists ? <div className="px-1 text-center">
+                <h1 className=" font-semibold text-center mb-3 -mt-3 text-4xl">
+                    {subsubcategoryHeadingsMD[subsubcategory]}
+                    {/* {subsubcategoryMD.SubsubcategoryHeading}{" "}
+                    {useRouter().query.subsubcategory} */}
                 </h1>
+                <h2 className="text-2xl font-medium text-greyish">
+                {subsubcategoryDescMD[subsubcategory]}
+                    {/* {subsubcategoryMD.SubsubcategoryDesc} */}
+                </h2>
             </div> : false}
             {/* Ending Conditional Rendering of Subcategories heading */}
 
-            <div className="grid grid-cols-1 p-4 md:grid-cols-2 md:p-0 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="grid grid-cols-1 p-4 mt-3 md:grid-cols-2 md:p-0 lg:grid-cols-3 xl:grid-cols-4">
                 {
                     unique.filter(item => item.frontmatter.show == true)
                         .filter(props => props.frontmatter.subcategory == subsubcategory)
@@ -149,21 +181,26 @@ export default function SubsubCategoryPage({ filesData, subsubcategory }) {
 
 
             {/* Start Conditional Rendering of models heading in Subcategories */}
-             {filesData.filter(item => item.frontmatter.show == true)
+            {filesData.filter(item => item.frontmatter.show == true)
                 .filter(props => props.frontmatter.subcategory == subsubcategory)
                 .filter(item => searchTitle(item, value)).map(props => {
                     if (!props.frontmatter.subsubcategory) {
                         subsubcategoryModelsExists = true
                     }
                 })}
-            {subsubcategoryModelsExists ?  <div className="text-center">
-                <h1 className=" font-semibold text-center mb-3 mt-3 text-4xl">
-                    Models of {useRouter().query.subsubcategory}
-
+            {subsubcategoryModelsExists ? <div className="px-1 text-center">
+                <h1 className=" font-semibold text-center mb-2 mt-5 text-4xl">
+                    {subsubcategoryModelHeadingsMD[subsubcategory]}
+                    {/* {subsubcategoryMD.ModelsHeading}{" "}
+                    {useRouter().query.subsubcategory} */}
                 </h1>
-            </div>: false}
+                <h2 className="text-2xl font-medium text-greyish">
+                {subsubcategoryModelDescMD[subsubcategory]}
+                    {/* {subsubcategoryMD.ModelsDesc} */}
+                </h2>
+            </div> : false}
             {/* Ending Conditional Rendering of models heading in Subcategories */}
-           
+
             <div className="grid grid-cols-1 p-4 md:grid-cols-2 md:p-0 lg:grid-cols-3 xl:grid-cols-4">
                 {filesData.filter(item => item.frontmatter.show == true)
                     .filter(props => props.frontmatter.subcategory == subsubcategory)
