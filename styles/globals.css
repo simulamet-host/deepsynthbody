@@ -9,12 +9,30 @@
 }
 @layer base {
     h1 {
-      @apply text-2xl font-semibold;
+      @apply text-3xl font-semibold;
     }
     h2 {
       @apply text-xl  font-semibold;
     }
+    h3{
+      @apply text-lg font-bold; 
+    }
+    h4{
+      @apply text-lg font-semibold; 
+    }
+    h4{
+      @apply text-base font-semibold; 
+    }
+    p img{
+      @apply max-h-72 max-w-xs;
+    }
+    p a 
+    {
+      @apply text-cyan-500;
+    }
   }  
+
+
   .swiper-button-next { color: #07849f !important; }
   .swiper-button-prev { color: #07849f !important; }
 
