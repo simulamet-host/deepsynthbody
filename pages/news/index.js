@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import fs from 'fs'
 import matter from 'gray-matter'
@@ -27,14 +28,14 @@ export default function News({ newsData }) {
             <h2 className="text-2xl font-medium text-greyish mb-4">
                 Latest Data Science News
             </h2>
-            <div class="flex mb-4">
+            <div className="flex mb-4">
             {newsData
                 .filter(item => item.frontmatter.show == true)
                 .map(props => {
                     return (
                         <div
                             className="max-w-sm rounded overflow-hidden shadow-xl m-6 flex-1"
-                            key={props.frontmatter.link}
+                            key={props.frontmatter.title}
                         >
                             <img
                                 className="w-full h-60 "
@@ -47,7 +48,7 @@ export default function News({ newsData }) {
                                 </div>
                                 <p className="text-gray-700 text-base">
                                     {props.frontmatter.description} <br/>
-                                    <a href={`${props.frontmatter.link}`} target="_blank" >Read More</a>
+                                    <a href={`${props.frontmatter.link}`}  >Read More</a>
                                 </p>
                             </div>
                             <div className="px-6 pt-4 pb-2">
@@ -61,7 +62,7 @@ export default function News({ newsData }) {
                                    # {props.frontmatter.tag3}
                                 </span> */}
                             </div>
-                            <div class="px-6 pt-4 pb-2">
+                            <div className="px-6 pt-4 pb-2">
                               
                                 <div className="text-sm">
                                     <p className="text-gray-900 leading-none">
