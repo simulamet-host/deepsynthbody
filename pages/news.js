@@ -22,7 +22,7 @@ export const getStaticProps = async () => {
     }
 }
 
-export default function News({ newsData }) {
+export default function news({ newsData }) {
     // export default function News() {
 
     return (
