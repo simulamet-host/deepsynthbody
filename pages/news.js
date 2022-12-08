@@ -17,7 +17,9 @@ export const getStaticProps = async () => {
     })
     return {
         props: {
-            newsData
+            newsData,
+            fallback: false
+
         }
     }
 }
