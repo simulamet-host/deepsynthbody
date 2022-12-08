@@ -8,7 +8,7 @@ export const getStaticProps = async () => {
     const readNews = fs.readdirSync('newsMD')
     const newsData = readNews.map(fileName => {
         const slug = fileName.replace('.md', '')
-        const filePath = `newsMd/${fileName}`
+        const filePath = `newsMd/${slug}`
         const readFile = fs.readFileSync(filePath, 'utf-8')
         const { data: frontmatter } = matter(readFile)
         return {
