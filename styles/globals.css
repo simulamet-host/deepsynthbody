@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.form-iframe {
+  height: 100vh;
+  width: 91vw;
+}
 @layer base {
     h1 {
       @apply text-2xl font-semibold;

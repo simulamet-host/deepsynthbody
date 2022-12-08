@@ -19,9 +19,18 @@ const Sidebar = () => {
   const router = useRouter();
   useEffect(() => {
     if (window.matchMedia("(max-width: 430px)").matches) {
-      setSmallScreen(false)
+      setSmallScreen(false);setToggleCollapse(true)
     } else { setSmallScreen(true); setToggleCollapse(false) }
   }, [isSmallScreen]);
+  //on window resize
+  function handleResize(){
+    if (window.matchMedia("(max-width: 430px)").matches) {
+      setSmallScreen(false);setToggleCollapse(true) 
+    } else { setSmallScreen(true); setToggleCollapse(false) } 
+  }
+  if (typeof window !== "undefined"){
+  window.addEventListener('resize', handleResize)}
+
 
   const wrapperClasses = classNames(
     "-my-8 pl-2 bg-light min-h-screen flex justify-between flex-col",
@@ -32,7 +41,7 @@ const Sidebar = () => {
   );
 
   const collapseIconClasses = classNames(
-    " rounded bg-light-lighter right-0",
+    "pl- rounded bg-light-lighter right-0",
     {
       "rotate-180": toggleCollapse,
     }

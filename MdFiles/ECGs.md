@@ -1,17 +1,17 @@
 ---
-title: 'Cardiovascular Model 5'
+title: 'Deepfake ECGs'
 category: 'Cardiovascular'
-subcategory: 'Sub Cardiovascular'
-subsubcategory: 'Subsub Cardiovascular'
-desc: 'Some description of Cardiovascular Model 5.'
-thumbnail: https://st3.depositphotos.com/1006472/15774/i/600/depositphotos_157743458-stock-photo-adult-male-with-heart-burn.jpg
+#subcategory: 'Sub Cardiovascular1'
+# subsubcategory: 'Subsub Cardiovascular'
+desc: 'A generative model to generate deepsynth ECG images.'
+thumbnail: https://st4.depositphotos.com/38951590/41607/v/600/depositphotos_416070486-stock-illustration-heart-beat-black-background.jpg
 publication: https://ieeexplore.ieee.org/abstract/document/9462062
 show: true
 ---
 
-# Cardiovascular Model 5
-Generate deepsynth-gitract images.  
-![](https://st3.depositphotos.com/1006472/15774/i/600/depositphotos_157743458-stock-photo-adult-male-with-heart-burn.jpg)
+# Deepfake ECG
+Generate Deepfake ECG images.  
+![](https://st2.depositphotos.com/3413075/11224/i/450/depositphotos_112248656-stock-photo-human-heart-anatomy.jpg)
 
 ## Installation
 

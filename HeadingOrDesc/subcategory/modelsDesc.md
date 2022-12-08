@@ -1,6 +1,6 @@
 ---
-Cardiovascular: Description of Models of Cardiovascular
-Digestive: Description of Models of Digestive
+Cardiovascular: Get the Dataset for Cardiovascular models
+Digestive: Get the Dataset for Digestive models
 Endocrine: Description of Models of Endocrine
 Integumentary: Description of Models of Integumentary
 Lymphatic: Description of Models of Lymphatic

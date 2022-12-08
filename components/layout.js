@@ -9,10 +9,10 @@ export default function Layout({ children }) {
     const footer = useSelector((state) => state.myFooter.value);
 
     return (
-        <div  className="flex h-screen flex-col">
+        <div className="flex h-screen flex-col ">
             <Navbar  />
             <br />
-
+            {/* sm:-mr-0 -mr-9 */}
 {/*             
             <header className="mb-8 py-2 justify-center bg-primary border border-orange-800 shadow-lg">
                 <div className='text-center'>
@@ -27,7 +27,7 @@ export default function Layout({ children }) {
 
             <div className="flex mt-2">
                 <Sidebar />
-                <div style={{ width: "60rem"}} className="h-900 flex-1 ">
+                <div style={{ width: "15rem"}} className="h-900 flex-1 ">
                     {children}
                 </div>
             </div>

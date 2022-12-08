@@ -1,17 +1,17 @@
 ---
-title: 'Cardiovascular Model 4'
-category: 'Cardiovascular'
-subcategory: 'Sub Cardiovascular2'
-subsubcategory: 'Subsub Cardiovascular2'
-desc: 'Some description of Cardiovascular Model 4.'
-thumbnail: https://static8.depositphotos.com/1229718/1035/i/600/depositphotos_10351537-stock-photo-human-heart-blood-system.jpg
+title: 'GI Tract'
+category: 'Digestive'
+#subcategory: 'Sub Cardiovascular1'
+# subsubcategory: 'Subsub Cardiovascular'
+desc: 'A generative model to generate deepsynth GI tract images.'
+thumbnail: https://st.depositphotos.com/1067125/3962/v/600/depositphotos_39629227-stock-illustration-human-gastrointestinal-tract.jpg
 publication: https://ieeexplore.ieee.org/abstract/document/9462062
 show: true
 ---
 
-# Cardiovascular Model 4
+# GI Tract
 Generate deepsynth-gitract images.  
-![](https://static8.depositphotos.com/1229718/1035/i/600/depositphotos_10351537-stock-photo-human-heart-blood-system.jpg)
+![](https://st2.depositphotos.com/3413075/11224/i/450/depositphotos_112248656-stock-photo-human-heart-anatomy.jpg)
 
 ## Installation
 

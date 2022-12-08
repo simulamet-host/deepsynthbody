@@ -1,13 +1,13 @@
 ---
-Cardiovascular: /deepsynthbody/imagesOfCategories/Cardiovascular.svg
-Digestive: /deepsynthbody/imagesOfCategories/Digestive.svg
-Endocrine: /deepsynthbody/imagesOfCategories/Endocrine.jpeg
-Integumentary: /deepsynthbody/imagesOfCategories/Integumentary.svg
-Lymphatic: /deepsynthbody/imagesOfCategories/Lymphatic.jpeg
-Muscular: /deepsynthbody/imagesOfCategories/Muscular.jpeg
-Nervous: /deepsynthbody/imagesOfCategories/Nervous.jpeg
-Reproductive: /deepsynthbody/imagesOfCategories/Reproductive.svg
-Respiratory: /deepsynthbody/imagesOfCategories/Respiratory.jpeg
-Skeletal: /deepsynthbody/imagesOfCategories/Skeletal.jpeg
-Urinary: /deepsynthbody/imagesOfCategories/Urinary.jpeg
+Cardiovascular: /Testing-deep/imagesOfCategories/Cardiovascular.svg
+Digestive: /Testing-deep/imagesOfCategories/Digestive.svg
+Endocrine: /Testing-deep/imagesOfCategories/Endocrine.jpeg
+Integumentary: /Testing-deep/imagesOfCategories/Integumentary.svg
+Lymphatic: /Testing-deep/imagesOfCategories/Lymphatic.jpeg
+Muscular: /Testing-deep/imagesOfCategories/Muscular.jpeg
+Nervous: /Testing-deep/imagesOfCategories/Nervous.jpeg
+Reproductive: /Testing-deep/imagesOfCategories/Reproductive.svg
+Respiratory: /Testing-deep/imagesOfCategories/Respiratory.jpeg
+Skeletal: /Testing-deep/imagesOfCategories/Skeletal.jpeg
+Urinary: /Testing-deep/imagesOfCategories/Urinary.jpeg
 ---

@@ -1,6 +1,6 @@
 ---
-Cardiovascular: Heading of Models of Cardiovascular
-Digestive: Heading of Models of Digestive
+Cardiovascular: Models of Cardiovascular
+Digestive: Models of Digestive
 Endocrine: Heading of Models of Models of Endocrine
 Integumentary: Heading of Models of Integumentary
 Lymphatic: Heading of Models of Lymphatic

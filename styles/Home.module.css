@@ -1,10 +1,24 @@
-.container {
-  padding: 0 2rem;
+.formcontainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 100%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  height: auto;
 }
 .img {
   width: 100%;
 }
-.main {
+/* .main {
   min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
@@ -12,7 +26,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .footer {
   display: flex;
