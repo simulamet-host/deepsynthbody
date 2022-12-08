@@ -66,7 +66,6 @@ export default function Home({ filesData, images, homeMD, sliderData }) {
     return (
 
         <SearchContext.Provider value={{ value, setValue }}>
-        {/* <Navbar  /> */}
                 {useRouter().pathname == "/" ? (
                         <Header sliderData={sliderData} />
                        
