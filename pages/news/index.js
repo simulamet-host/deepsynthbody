@@ -5,10 +5,10 @@ import matter from 'gray-matter'
 import Image from 'next/image'
 
 export const getStaticProps = async () => {
-    const readNews = fs.readdirSync('pages/news/newsMD')
+    const readNews = fs.readdirSync('newsMD')
     const newsData = readNews.map(fileName => {
         const slug = fileName.replace('.md', '')
-        const filePath = `pages/news/newsMd/${fileName}`
+        const filePath = `newsMd/${fileName}`
         const readFile = fs.readFileSync(filePath, 'utf-8')
         const { data: frontmatter } = matter(readFile)
         return {
