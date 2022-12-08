@@ -5,10 +5,10 @@ import matter from 'gray-matter'
 import Image from 'next/image'
 
 export async function getStaticProps() {
-    const files = fs.readdirSync('MdFiles')
+    const files = fs.readdirSync('newsMd')
     const filesData = files.map(fileName => {
         const slug = fileName.replace('.md', '')
-        const filepath = `MdFiles/${fileName}`
+        const filepath = `newsMd/${fileName}`
         const readFile = fs.readFileSync(filepath, 'utf-8')
         const stats = fs.statSync(filepath)
         const { data: frontmatter } = matter(readFile)
@@ -32,8 +32,7 @@ export default function News({ filesData }) {
                 Latest Data Science News
             </h2>
             <div className="flex mb-4">
-            {filesData
-                .map(props => {
+            {filesData.map(props => {
                     return (
                         <div
                             className="max-w-sm rounded overflow-hidden shadow-xl m-6 flex-1"
