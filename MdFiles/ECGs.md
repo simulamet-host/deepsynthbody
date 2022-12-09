@@ -1,5 +1,5 @@
 ---
-title: 'Deepfake ECGs'
+title: 'ECGs'
 category: 'Cardiovascular'
 #subcategory: 'Sub Cardiovascular1'
 # subsubcategory: 'Subsub Cardiovascular'
@@ -9,63 +9,51 @@ publication: https://ieeexplore.ieee.org/abstract/document/9462062
 show: true
 ---
 
-# Deepfake ECG
-Generate Deepfake ECG images.  
-![](https://st2.depositphotos.com/3413075/11224/i/450/depositphotos_112248656-stock-photo-human-heart-anatomy.jpg)
-
-## Installation
-
-Use the package manager [pip](https://pypi.org) to install deepsynth-gitract.
-
-
+## Generating DeepFake ECGs with 8-leads.
 
 ```bash
-pip install deepsynth-gitract
+import deepsynthbody.cardiovascular.ecg as ecg
+
+help(ecg.generate)
+
+Help on function generate in module deepsynthbody.cardiovascular.ecg.functions:
+
+generate(num_ecg, out_dir, start_id=0, device='cpu', **kwargs)
+    Generate DeepFake 12-leads 10-sec long ECG.
+    
+    Parameters
+    ----------------
+    num_ecg: int
+        Number of DeepFake ECGs to generate randomly.
+    out_dir: str
+        A directory to save output files with extension ".asc". 
+    start_id: int 
+        A interger number to start file names. Default value is 0.and
+    device: str
+        A device to run the generator. Use strin "cpu" to run on CPU and "cuda" to run on a GPU. 
+    
+    Return
+    ------
+    None
+        No return value.
+
+# Run on CPU (default setting)
+ecg.generate(5, ".", start_id=0, device="cpu") # Generate 5 ECGs to the current folder starting from id=0
+
+# Run on GPU 
+ecg.generate(5, ".", start_id=0, device="cuda") # Generate 5 ECGs to the current folder starting from id=0
+```
+The generator functions can generate DeepFake ECGs with 8-lead values [lead names from first coloum to eighth colum: ‘I’,’II’,’V1’,’V2’,’V3’,’V4’,’V5’,’V6’] for 10s (5000 values per lead). These 8-leads format can be converted to 12-leads format using the following equations.
+
+```bash
+lead III value = (lead II value) - (lead I value)
+lead aVR value = -0.5*(lead I value + lead II value)
+lead aVL value = lead I value - 0.5 * lead II value
+lead aVF value = lead II value - 0.5 * lead I value
 ```
 
-## Usage
-
-### Run on CPU (default setting)
-
-```python
-TBA - You have to have a NVIDIA GPU to run this package. We are working on CPU version.
-```
-
-### Run on GPU - generation process
-
-```python
-import deepsynth_gitract
-
-deepsynth_gitract.generate(name, result_dir, checkpoint_dir, num_img_per_tile, num_of_outputs, trunc_psi=0.75):
-    """ Generate deepsynth Gastrointestinal tract images.
-
-    Keyword arguments:
-    name -- Any name to keep trac of generations
-    result_dir -- A directory to save output
-    checkpoint_dir -- A directory to download pre-trained checkpoints
-    num_img_per_tile -- Number of images per dimenstion of the grid
-    num_of_outputs -- Number of outputs to generate
-    trunc_psi -- value between 0.5 and 1.0 (default 0.75)
-    """
-```
-
-### Run on GPU - to generate interpolations between random points
-
-```python
-deepsynth_gitract.generate_interpolation(name, result_dir, checkpoint_dir, num_img_per_tile, num_of_outputs, num_of_steps_to_interpolate, save_frames, trunc_psi=0.75):
-    """ Generate deepsynth Gastrointestinal tract images.
-
-    Keyword arguments:
-    name -- Any name to keep trac of generations
-    result_dir -- A directory to save output
-    checkpoint_dir -- A directory to download pre-trained checkpoints
-    num_img_per_tile -- Number of images per dimenstion of the grid
-    num_of_outputs -- Number of outputs to generate
-    num_of_steps_to_interpolate -- Number of step between two random points
-    save_frames -- True if you want frame by frame, otherwise .gif will be generated
-    trunc_psi -- value between 0.5 and 1.0 (default 0.75)
-    """
-```
+## Generated DeepFake ECG
+<img src="https://deepsynthbody.org/images/ecg_fake.png" width="800" />
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

@@ -37,7 +37,7 @@ const NavBar = () => {
           About
         </Link>
       </Typography>
-      <Typography
+      {/* <Typography
         as="li"
         variant="paragraph"
         className="p-1 font-semibold text-[#0797B7]"
@@ -45,7 +45,7 @@ const NavBar = () => {
         <Link href="/docs" className="flex items-center">
           Docs
         </Link>
-      </Typography>
+      </Typography> */}
       <Typography
         as="li"
         variant="paragraph"
