@@ -26,7 +26,7 @@ export default function News({ filesData }) {
 
         return (
             <main className="container mx-auto">
-                <h2 className="text-2xl font-medium text-greyish mb-4 text-center">
+                <h2 className="text-2xl font-medium text-greyish mb-4 px-1 text-center">
                     Latest Data Science News
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
