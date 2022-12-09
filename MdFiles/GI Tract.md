@@ -43,6 +43,7 @@ generate(name, result_dir, checkpoint_dir, num_img_per_tile, num_of_outputs, tru
 
 ## Random sample generated from deepsynthbody.digestive.gitract.generate()
 <img src="https://deepsynthbody.org/images/generated_polyps_style_gan.png" width="800" />
+
 ### How to generate interpolated samples between random samples?
 
 ```bash
