@@ -1,13 +1,13 @@
 ---
-Cardiovascular: Models of Cardiovascular
-Digestive: Models of Digestive
-Endocrine: Heading of Models of Models of Endocrine
-Integumentary: Heading of Models of Integumentary
-Lymphatic: Heading of Models of Lymphatic
-Muscular: Heading of Models of Muscular
-Nervous: Heading of Models of Nervous
-Reproductive: Heading of Models of Reproductive
-Respiratory: Heading of Models of Respiratory
-Skeletal: Heading of Models of Skeletal
-Urinary: Heading of Models of Urinary
+Cardiovascular: Models of Cardiovascular System
+Digestive: Models of Digestive System
+Endocrine: Models of Endocrine System
+Integumentary: Models of Integumentary System
+Lymphatic: Models of Lymphatic System
+Muscular: Models of Muscular System
+Nervous: Models of Nervous System
+Reproductive: Models of Reproductive System
+Respiratory: Models of Respiratory System
+Skeletal: Models of Skeletal System
+Urinary: Models of Urinary System
 ---

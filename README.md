@@ -1,3 +1,3 @@
-# Testing-deep
+# DeepSynthBody
 This is the next version of DeepSynthBody repository, 
-Visit Now at https://alihaider1998.github.io/Testing-deep/
+Visit Now at https://simulamet-host.github.io/deepsynthbody/
