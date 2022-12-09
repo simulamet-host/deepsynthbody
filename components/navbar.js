@@ -43,7 +43,7 @@ const NavBar = () => {
         className="p-1 font-semibold text-[#0797B7]"
       >
         <Link href="/about" className="flex items-center">
-          About Us
+          About
         </Link>
       </Typography>
       {/* <Typography
