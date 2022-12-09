@@ -35,7 +35,7 @@ export default function News({ filesData }) {
                     .map(props => {
                         return (
                             <div
-                                className="max-w-sm rounded overflow-hidden shadow-xl m-6 flex-1"
+                                className="max-w-sm rounded overflow-hidden shadow-xl m-6 flex flex-col justify-between"
                                 key={props.frontmatter.title}
                             >
                                 <img
