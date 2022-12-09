@@ -23,6 +23,7 @@ const NavBar = () => {
         as="li"
         variant="paragraph"
         className="p-1 font-semibold text-[#0797B7]"
+        onClick={ ()=>   setOpenNav(false)}
       >
         <Link href="/" className="flex items-center">
           Home
@@ -32,8 +33,9 @@ const NavBar = () => {
         as="li"
         variant="paragraph"
         className="p-1 font-semibold text-[#0797B7]"
+        onClick={ ()=>   setOpenNav(false)}
       >
-        <Link href="/news" className="flex items-center">
+        <Link href="/news"  className="flex items-center">
           News
         </Link>
       </Typography>
@@ -41,6 +43,7 @@ const NavBar = () => {
         as="li"
         variant="paragraph"
         className="p-1 font-semibold text-[#0797B7]"
+        onClick={ ()=>   setOpenNav(false)}
       >
         <Link href="/about" className="flex items-center">
           About
@@ -60,6 +63,7 @@ const NavBar = () => {
         as="li"
         variant="paragraph"
         className="p-1 font-semibold text-[#0797B7]"
+        onClick={ ()=>   setOpenNav(false)}
       >
         <Link href="/form" className="flex items-center">
           Contact Us
