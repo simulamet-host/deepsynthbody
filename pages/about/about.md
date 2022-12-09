@@ -1,28 +1,25 @@
+---
+title: About DeepSynthBody 
+update date: Dec 12,2022
+image: "https://deepsynthbody.org/images/deepfakebody-extended-flow-v2.png"
+---
 
-# About DeepSynthBody: the beginning of the end for data deficiency in medicine
-<br/>
-<br/>
+## The beginning of the end for data deficiency in medicine
+
+A novel framework to solve data deficiency problems caused by privacy issues and time-consuming and costly medical data annotation processes.
 
 
-## Main objectives of DeepSynthBody is to,
-<br/>
+### Main objectives of DeepSynthBody is to
 
 - overcome the privacy related limitations for medical data by producing open access deep synthetic data.
 - reduce the time-consuming and resource-consuming process of medical data labeling and annotation.
 - find inter-correlations of human body organs (how one organ affect to other organs) and functions and reproduce them to produce a new model for the human body.
 
-
-<br/>
-
-## Additionaly, DeepSynthBody works as:
-
-<br/>
-
+### Additionaly, DeepSynthBody works as
 
 - a repository for deep generative models used in medicine.
 - a data compression mechanism to keep big medical data sets in a small storage without any privacy concerns and space to save large amounts of the data
 
-<br/>
+#### AUTHORS
 
-
-AUTHORS: V. Thambawita, S. Hicks, J. Isaksen, M. H. Stensen, T. B. Haugen, J. Kanters, S. Parasa, T. de Lange, H. D. Johansen, D. Johansen et al.
+V. Thambawita, S. Hicks, J. Isaksen, M. H. Stensen, T. B. Haugen, J. Kanters, S. Parasa, T. de Lange, H. D. Johansen, D. Johansen et al.
