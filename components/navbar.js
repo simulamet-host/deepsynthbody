@@ -33,8 +33,17 @@ const NavBar = () => {
         variant="paragraph"
         className="p-1 font-semibold text-[#0797B7]"
       >
+        <Link href="/news" className="flex items-center">
+          News
+        </Link>
+      </Typography>
+      <Typography
+        as="li"
+        variant="paragraph"
+        className="p-1 font-semibold text-[#0797B7]"
+      >
         <Link href="/about" className="flex items-center">
-          About
+          About Us
         </Link>
       </Typography>
       {/* <Typography
@@ -46,22 +55,14 @@ const NavBar = () => {
           Docs
         </Link>
       </Typography> */}
-      <Typography
-        as="li"
-        variant="paragraph"
-        className="p-1 font-semibold text-[#0797B7]"
-      >
-        <Link href="/news" className="flex items-center">
-          News
-        </Link>
-      </Typography>
+   
       <Typography
         as="li"
         variant="paragraph"
         className="p-1 font-semibold text-[#0797B7]"
       >
         <Link href="/form" className="flex items-center">
-          Form
+          Contact Us
         </Link>
       </Typography>
 
