@@ -1,7 +1,7 @@
 ---
-buttonName: 'Endocrine'
-thumbnail: '/deepsynthbody/imagesOfCategories/Endocrine.jpeg'
-link: https://alihaider1998.github.io/deepsynthbody/Endocrine/
-description: Here is some decription for endocrine
+buttonName: 'Digestive'
+thumbnail: /deepsynthbody/imagesOfCategories/digestive small.svg
+link: https://simulamet-host.github.io/deepsynthbody/Digestive/
+description: Digestive System Datasets are available now
 show: true
 ---

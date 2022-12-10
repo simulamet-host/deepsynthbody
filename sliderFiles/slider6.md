@@ -1,7 +1,7 @@
 ---
 buttonName: 'Nervous'
-thumbnail: '/deepsynthbody/imagesOfCategories/Nervous.jpeg'
-link: https://alihaider1998.github.io/deepsynthbody/Nervous/
-description: Here is some decription for nervous
+thumbnail: /deepsynthbody/imagesOfCategories/nervous system.svg
+link: https://simulamet-host.github.io/deepsynthbody/Nervous/
+description: Datasets for Nervous System are coming soon
 show: true
 ---

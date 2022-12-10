@@ -1,7 +1,7 @@
 ---
 buttonName: 'Lymphatic'
-thumbnail: '/deepsynthbody/imagesOfCategories/Lymphatic.jpeg'
-link: https://alihaider1998.github.io/deepsynthbody/Lymphatic/
-description: Here is some decription for lymphatic
+thumbnail: "/deepsynthbody/imagesOfCategories/lymphatic.svg"
+link: https://simulamet-host.github.io/deepsynthbody/Lymphatic/
+description: Datasets for Lymphatics are coming soon
 show: true
 ---
