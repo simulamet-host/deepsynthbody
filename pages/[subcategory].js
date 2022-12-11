@@ -90,22 +90,22 @@ export default function CategoryPage({ filesData, subcategory, subcategorySearch
     //search start
     const searchTitle = (item, toBeChecked) => {
         return (
-            item.frontmatter.subcategory ? searchByTitle(item, toBeChecked) ||
-                searchBySubCatergory(item.frontmatter.subcategory, toBeChecked) :
-                searchByTitle(item, toBeChecked)
+            item.frontmatter.subcategory ? searchByTitle(item, toBeChecked.toLowerCase()) ||
+                searchBySubCatergory(item.frontmatter.subcategory, toBeChecked.toLowerCase()) :
+                searchByTitle(item, toBeChecked.toLowerCase())
         )
     }
     const searchByTitle = (item, toBeChecked) => {
         if (!item.frontmatter.subcategory) {
             if (item.frontmatter.title) {
-                return item.frontmatter.title.toLowerCase().includes(toBeChecked) || 
-                item.frontmatter.category.toLowerCase().includes(toBeChecked) ||
-                item.frontmatter.desc.toLowerCase().includes(toBeChecked)
+                return item.frontmatter.title.toLowerCase().includes(toBeChecked.toLowerCase()) || 
+                item.frontmatter.category.toLowerCase().includes(toBeChecked.toLowerCase()) ||
+                item.frontmatter.desc.toLowerCase().includes(toBeChecked.toLowerCase())
             }
         }
     }
     const searchBySubCatergory = (item, toBeChecked) => {
-        return item.toLowerCase().includes(toBeChecked)
+        return item.toLowerCase().includes(toBeChecked.toLowerCase())
     }
     //search end
 

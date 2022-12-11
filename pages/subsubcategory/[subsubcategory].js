@@ -11,20 +11,6 @@ import SearchAndFilter from '../../components/search'
 import { useDispatch, useSelector, } from "react-redux";
 import { Subcategory, Subsubcategory, BacktoModels, clearThirdLink, levelTwoName } from "../../slices/sidebarStatus";
 
-const searchTitle = (item, toBeChecked) => {
-    return (
-        item.frontmatter.subsubcategory ? searchByTitle(item.frontmatter.title, toBeChecked) ||
-            searchBySubSubCatergory(item.frontmatter.subsubcategory, toBeChecked) :
-            searchByTitle(item.frontmatter.title, toBeChecked)
-    )
-}
-const searchByTitle = (item, toBeChecked) => {
-    return item.toLowerCase().includes(toBeChecked)
-}
-const searchBySubSubCatergory = (item, toBeChecked) => {
-    return item.toLowerCase().includes(toBeChecked)
-}
-
 
 export async function getStaticPaths() {
     const files = fs.readdirSync('MdFiles')
@@ -111,14 +97,14 @@ export default function SubsubCategoryPage({ filesData, subsubcategory, subcateg
     const searchByTitle = (item, toBeChecked) => {
         if (!item.frontmatter.subsubcategory) {
             if (item.frontmatter.title) {
-                return item.frontmatter.title.toLowerCase().includes(toBeChecked) ||
-                    item.frontmatter.category.toLowerCase().includes(toBeChecked) ||
-                    item.frontmatter.desc.toLowerCase().includes(toBeChecked)
+                return item.frontmatter.title.toLowerCase().includes(toBeChecked.toLowerCase()) ||
+                    item.frontmatter.category.toLowerCase().includes(toBeChecked.toLowerCase()) ||
+                    item.frontmatter.desc.toLowerCase().includes(toBeChecked.toLowerCase())
             }
         }
     }
     const searchBySubSubCatergory = (item, toBeChecked) => {
-        return item.toLowerCase().includes(toBeChecked)
+        return item.toLowerCase().includes(toBeChecked.toLowerCase())
     }
     //search end
 

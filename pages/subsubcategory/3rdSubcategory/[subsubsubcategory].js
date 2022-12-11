@@ -17,9 +17,9 @@ const searchTitle = (item, toBeChecked) => {
         searchByTitle(item, toBeChecked))
 }
 const searchByTitle = (item, toBeChecked) => {
-    return item.frontmatter.title.toLowerCase().includes(toBeChecked)  ||
-    item.frontmatter.category.toLowerCase().includes(toBeChecked) ||
-    item.frontmatter.desc.toLowerCase().includes(toBeChecked)
+    return item.frontmatter.title.toLowerCase().includes(toBeChecked.toLowerCase())  ||
+    item.frontmatter.category.toLowerCase().includes(toBeChecked.toLowerCase()) ||
+    item.frontmatter.desc.toLowerCase().includes(toBeChecked.toLowerCase())
 }
 
 export async function getStaticPaths() {
