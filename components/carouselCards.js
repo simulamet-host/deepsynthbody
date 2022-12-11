@@ -30,7 +30,9 @@ export default function Card(props) {
                         <img
                             alt={props.buttonName}
                             src={`${props.thumbnail}`}
-                            className="h-7/12 mx-auto  mb-4 object-fill cursor-default aspect-square rounded-full w-7/12"
+                            // className="h-7/12 mx-auto  mb-4 object-fill cursor-default aspect-square rounded-full w-7/12"
+                            className="h-5/12 mx-auto  mb-4 object-fill cursor-default w-5/12"
+
                         />
                     </div>
                 </div>
