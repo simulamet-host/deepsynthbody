@@ -26,7 +26,7 @@ export default function Card(props) {
                                 alt={props.title}
                                 src={`${props.thumbnail}`}
                                 // className="min-h-5/6 m-6 p-14 object-fill border-2 border-cyan-500 aspect-square rounded-full w-5/6"
-                                className="min-h-5/6 object-fill w-5/6"
+                                className="min-h-5/6 object-fill border-2 border-cyan-500 rounded-full w-5/6"
 
                             />
                         </div>
