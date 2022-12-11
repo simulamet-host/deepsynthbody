@@ -1,13 +1,13 @@
 ---
-Cardiovascular: /deepsynthbody/imagesOfCategories/cardiovascular_sm.svg
-Digestive: /deepsynthbody/imagesOfCategories/Digestive.svg
-Endocrine: /deepsynthbody/imagesOfCategories/endocrine system.svg
-Integumentary: /deepsynthbody/imagesOfCategories/Integumentary.svg
-Lymphatic: /deepsynthbody/imagesOfCategories/lymphatic.svg
-Muscular: /deepsynthbody/imagesOfCategories/muscular.svg
-Nervous: /deepsynthbody/imagesOfCategories/nervous system.svg
-Reproductive: /deepsynthbody/imagesOfCategories/Reproductive.svg
-Respiratory: /deepsynthbody/imagesOfCategories/respiratory small.svg
-Skeletal: /deepsynthbody/imagesOfCategories/skeletal.svg
-Urinary: /deepsynthbody/imagesOfCategories/urinary_sm.svg
+Cardiovascular: /deepsynthbody/imagesOfCategories/icons without circle/circle cardiovascular.svg
+Digestive: /deepsynthbody/imagesOfCategories/icons without circle/circle digestive.svg
+Endocrine: /deepsynthbody/imagesOfCategories/icons without circle/circle endocrine2.svg
+Integumentary: /deepsynthbody/imagesOfCategories/icons without circle/circle integumentary.svg
+Lymphatic: /deepsynthbody/imagesOfCategories/icons without circle/circle lymphatic.svg
+Muscular: /deepsynthbody/imagesOfCategories/icons without circle/circle muscular.svg
+Nervous: /deepsynthbody/imagesOfCategories/icons without circle/circle nervous.svg
+Reproductive: /deepsynthbody/imagesOfCategories/icons without circle/circle reproductive.svg
+Respiratory: /deepsynthbody/imagesOfCategories/icons without circle/circle respiratory.svg
+Skeletal: /deepsynthbody/imagesOfCategories/icons without circle/circle skeletal.svg
+Urinary: /deepsynthbody/imagesOfCategories/icons without circle/circle urinary.svg
 ---
