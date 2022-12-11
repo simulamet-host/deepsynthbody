@@ -18,30 +18,29 @@
 <ellipse cx="1128.63" cy="305.775" rx="7.71074" ry="7.22982" fill="url(#paint16_diamond_140_917)"/>
 <ellipse cx="1154.84" cy="461.941" rx="7.71074" ry="7.22982" fill="url(#paint17_diamond_140_917)"/>
 <ellipse cx="1077.74" cy="385.304" rx="7.71074" ry="7.22982" fill="url(#paint18_diamond_140_917)"/>
-<ellipse cx="719.032" cy="1343.66" rx="13.0319" ry="12.6604" fill="url(#paint19_diamond_140_917)"/>
 <circle cx="850" cy="850" r="849.5" stroke="white"/>
 <defs>
 <linearGradient id="paint0_linear_140_917" x1="916.584" y1="337.528" x2="916.584" y2="626.871" gradientUnits="userSpaceOnUse">
 <stop stop-color="#057189"/>
 <stop offset="0.541667" stop-color="#15CEF9"/>
-<stop offset="1" stop-color="#0797B7"/>
+<stop offset="1" stop-color="#07949F"/>
 </linearGradient>
 <linearGradient id="paint1_linear_140_917" x1="849.5" y1="573.641" x2="849.5" y2="1520.75" gradientUnits="userSpaceOnUse">
 <stop stop-color="#057189"/>
 <stop offset="0.494792" stop-color="#15CEF9"/>
-<stop offset="1" stop-color="#0797B7"/>
+<stop offset="1" stop-color="#07949F"/>
 </linearGradient>
 <linearGradient id="paint2_linear_140_917" x1="923.716" y1="256.974" x2="923.716" y2="636.321" gradientUnits="userSpaceOnUse">
 <stop stop-color="#0797B7"/>
 <stop offset="0.5" stop-color="#15CEF9"/>
 <stop offset="0.9999" stop-color="#057189"/>
-<stop offset="1" stop-color="#057189"/>
+<stop offset="1" stop-color="#07949F"/>
 </linearGradient>
 <linearGradient id="paint3_linear_140_917" x1="853.933" y1="725.828" x2="853.933" y2="1267.34" gradientUnits="userSpaceOnUse">
 <stop stop-color="#028BCB"/>
 <stop offset="0.0001" stop-color="#057189"/>
 <stop offset="0.588542" stop-color="#15CEF9"/>
-<stop offset="1" stop-color="#0797B7"/>
+<stop offset="1" stop-color="#07949F"/>
 </linearGradient>
 <radialGradient id="paint4_diamond_140_917" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(975.185 547.974) rotate(90) scale(7.22982 7.71074)">
 <stop stop-color="white"/>
@@ -114,11 +113,6 @@
 <stop offset="1" stop-color="#25A7C4"/>
 </radialGradient>
 <radialGradient id="paint18_diamond_140_917" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1077.74 385.304) rotate(90) scale(7.22982 7.71074)">
-<stop stop-color="white"/>
-<stop offset="0.5" stop-color="#93E5F7"/>
-<stop offset="1" stop-color="#25A7C4"/>
-</radialGradient>
-<radialGradient id="paint19_diamond_140_917" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(719.032 1343.66) rotate(90) scale(12.6604 13.0319)">
 <stop stop-color="white"/>
 <stop offset="0.5" stop-color="#93E5F7"/>
 <stop offset="1" stop-color="#25A7C4"/>

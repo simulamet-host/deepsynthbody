@@ -1,7 +1,7 @@
 ---
 Cardiovascular: /deepsynthbody/imagesOfCategories/icons without circle/circle cardiovascular.svg
 Digestive: /deepsynthbody/imagesOfCategories/icons without circle/circle digestive.svg
-Endocrine: /deepsynthbody/imagesOfCategories/icons without circle/circle endocrine2.svg
+Endocrine: /deepsynthbody/imagesOfCategories/icons without circle/circle endocrine.svg
 Integumentary: /deepsynthbody/imagesOfCategories/icons without circle/circle integumentary.svg
 Lymphatic: /deepsynthbody/imagesOfCategories/icons without circle/circle lymphatic.svg
 Muscular: /deepsynthbody/imagesOfCategories/icons without circle/circle muscular.svg
