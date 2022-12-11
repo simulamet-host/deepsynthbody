@@ -12,19 +12,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Subcategory, Subsubcategory, BacktoModels, clearSecondThirdLink, levelOneName } from "../slices/sidebarStatus";
 
 
-const searchTitle = (item, toBeChecked) => {
-    return (
-        item.frontmatter.subcategory ? searchByTitle(item.frontmatter.title, toBeChecked) ||
-            searchBySubCatergory(item.frontmatter.subcategory, toBeChecked) :
-            searchByTitle(item.frontmatter.title, toBeChecked)
-    )
-}
-const searchByTitle = (title, toBeChecked) => {
-    return title.toLowerCase().includes(toBeChecked)
-}
-const searchBySubCatergory = (subcategory, toBeChecked) => {
-    return subcategory.toLowerCase().includes(toBeChecked)
-}
 
 
 export async function getStaticPaths() {
@@ -100,6 +87,27 @@ export async function getStaticProps({ params: { subcategory } }) {
 export default function CategoryPage({ filesData, subcategory, subcategorySearchHeadingMD,
     subcategoryHeadingsMD, subcategoryModelHeadingsMD,
     subcategoryDescMD, subcategoryModelDescMD }) {
+    //search start
+    const searchTitle = (item, toBeChecked) => {
+        return (
+            item.frontmatter.subcategory ? searchByTitle(item, toBeChecked) ||
+                searchBySubCatergory(item.frontmatter.subcategory, toBeChecked) :
+                searchByTitle(item, toBeChecked)
+        )
+    }
+    const searchByTitle = (item, toBeChecked) => {
+        if (!item.frontmatter.subcategory) {
+            if (item.frontmatter.title) {
+                return item.frontmatter.title.toLowerCase().includes(toBeChecked) || 
+                item.frontmatter.category.toLowerCase().includes(toBeChecked) ||
+                item.frontmatter.desc.toLowerCase().includes(toBeChecked)
+            }
+        }
+    }
+    const searchBySubCatergory = (item, toBeChecked) => {
+        return item.toLowerCase().includes(toBeChecked)
+    }
+    //search end
 
     const dispatch = useDispatch();
     useEffect(() => {
@@ -120,6 +128,7 @@ export default function CategoryPage({ filesData, subcategory, subcategorySearch
         }
         return false;
     });
+
     //Finish Filtering out records and avoiding one category to appear more time 
     let subcategoryExists = false;
     let subcategoryModelsExists = false;

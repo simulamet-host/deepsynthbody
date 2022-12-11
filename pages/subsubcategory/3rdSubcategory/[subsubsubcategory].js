@@ -14,10 +14,12 @@ import { Subcategory, Subsubcategory, BacktoModels, levelThreeName } from "../..
 
 const searchTitle = (item, toBeChecked) => {
     return (
-        searchByTitle(item.frontmatter.title, toBeChecked))
+        searchByTitle(item, toBeChecked))
 }
-const searchByTitle = (title, toBeChecked) => {
-    return title.toLowerCase().includes(toBeChecked)
+const searchByTitle = (item, toBeChecked) => {
+    return item.frontmatter.title.toLowerCase().includes(toBeChecked)  ||
+    item.frontmatter.category.toLowerCase().includes(toBeChecked) ||
+    item.frontmatter.desc.toLowerCase().includes(toBeChecked)
 }
 
 export async function getStaticPaths() {
