@@ -16,7 +16,7 @@ export default function Header ({sliderData}){
       // autoHeight= {true}
       navigation
       autoplay={{
-        delay: 2000, 
+        delay: 3000, 
         // pauseOnMouseEnter: true,
       }}
       pagination={{ clickable: true }}

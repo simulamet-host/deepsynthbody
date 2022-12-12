@@ -72,7 +72,7 @@ export default function Home({ filesData, images, homeMD, sliderData }) {
                 ) : (
                     false
                 )}
-                 <div className="mb-12 mt-4 px-1 text-center">
+                 <div className="mb-12 mt-6 px-1 text-center">
                     <div className='-mb-2'><h2 className="text-2xl font-medium text-greyish">
                     {homeMD.SearchHeading}
                     </h2></div>
