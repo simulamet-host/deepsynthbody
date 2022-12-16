@@ -21,36 +21,38 @@ const NavBar = () => {
 
   const navList = (
     <ul className="mb-4 mt-2 text-center flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+              <Link href="/" className="flex items-center">
       <Typography
         as="li"
         variant="paragraph"
-        className={router.pathname == "/" ? "px-2 py-1 font-semibold text-white border-primary bg-primary rounded-md	border-4" : "p-1 font-semibold text-[#0797B7]"}
+        className={router.pathname == "/" ? "cursor-pointer px-2 py-1 font-semibold text-white border-primary bg-primary rounded-md	border-4" : "cursor-pointer p-1 font-semibold text-[#0797B7]"}
         onClick={() => setOpenNav(false)}
       >
-        <Link href="/" className="flex items-center">
           Home
-        </Link>
       </Typography>
+      </Link>
+      <Link href="/news/news" className="flex items-center">
       <Typography
         as="li"
         variant="paragraph"
-        className={router.pathname == "/news/news" ? "px-2 py-1 font-semibold text-white border-primary bg-primary rounded-md	border-4" : "p-1 font-semibold text-[#0797B7]"}
+        className={router.pathname == "/news/news" ? "cursor-pointer px-2 py-1 font-semibold text-white border-primary bg-primary rounded-md	border-4" : "cursor-pointer p-1 font-semibold text-[#0797B7]"}
         onClick={() => setOpenNav(false)}
       >
-        <Link href="/news/news" className="flex items-center">
           News
-        </Link>
       </Typography>
+      </Link>
+      <Link href="/about" className="flex items-center">
+
       <Typography
         as="li"
         variant="paragraph"
-        className={router.pathname == "/about" ? "px-2 py-1 font-semibold text-white border-primary bg-primary rounded-md	border-4" : "p-1 font-semibold text-[#0797B7]"}
+        className={router.pathname == "/about" ? "cursor-pointer px-2 py-1 font-semibold text-white border-primary bg-primary rounded-md	border-4" : "cursor-pointer p-1 font-semibold text-[#0797B7]"}
         onClick={() => setOpenNav(false)}
       >
-        <Link href="/about" className="flex items-center">
           About
-        </Link>
       </Typography>
+      </Link>
+
       {/* <Typography
         as="li"
         variant="paragraph"
@@ -60,17 +62,16 @@ const NavBar = () => {
           Docs
         </Link>
       </Typography> */}
-
+        <Link href="/form" className="flex items-center cursor-pointer">
       <Typography
         as="li"
         variant="paragraph"
-        className={router.pathname == "/form" ? "px-2 py-1 font-semibold text-white border-primary bg-primary rounded-md	border-4" : "p-1 font-semibold text-[#0797B7]"}
+        className={router.pathname == "/form" ? "cursor-pointer px-2 py-1 font-semibold text-white border-primary bg-primary rounded-md	border-4" : "cursor-pointer p-1 font-semibold text-[#0797B7]"}
         onClick={() => setOpenNav(false)}
       >
-        <Link href="/form" className="flex items-center">
           Contact Us
-        </Link>
       </Typography>
+      </Link>
 
     </ul>
   );
