@@ -18,7 +18,7 @@ export default function SearchAndFilter() {
 
     const { value, setValue } = useContext(SearchContext)
     let newsRoute;
-    router.pathname == "/news" ? newsRoute = true : false
+    router.pathname == "/news/news" ? newsRoute = true : false
     return (
         <div className="mt-6">
             <div className="relative mx-auto flex sm:w-30 px-2 md:w-96 lg:50 items-center">
