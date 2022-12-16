@@ -4,9 +4,14 @@ image: 'https://d2r55xnwy6nx47.cloudfront.net/uploads/2022/11/NeurramChips-cr.Se
 link: https://www.quantamagazine.org/a-brain-inspired-chip-can-run-ai-with-far-less-energy-20221110/
 description: Artificial intelligence algorithms cannot keep growing at their current pace
 category: AI
-date: November 17, 2022
+date: November 17 2022
 tag1: data science
 tag2: AI
 author: Allison whitten
 show: true
 ---
+
+## Generating DeepFake ECGs with 8-leads.
+
+```bash
+import deepsynthbody.cardiovascular.ecg as ecg

@@ -4,9 +4,14 @@ image: 'https://www.techrepublic.com/wp-content/uploads/2022/04/AdobeStock_40051
 link: https://www.quantamagazine.org/a-brain-inspired-chip-can-run-ai-with-far-less-energy-20221110/
 description: Synthetic data is an ecosystem for perfect data, showing promise in creating more capable and ethical AI models.
 category: AI
-date: April 28, 2022
+date: April 28 2022
 tag1: machine learning
 tag2: AI
 author: Unknown
 show: true
 ---
+
+## Generating DeepFake ECGs with 8-leads.
+
+```bash
+import deepsynthbody.cardiovascular.ecg as ecg

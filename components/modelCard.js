@@ -7,7 +7,6 @@ export default function ModelCard(props) {
     const router = useRouter();
     let goTo;
     if (router.pathname == "/") { goTo = `${props.category}` }
-    // else if(router.pathname == `/[subcategory]`){goTo=`details/${props.slug}`}
     else if (router.pathname == `/[subcategory]`) { goTo = `subsubcategory/3rdSubcategory/details/${props.slug}` }
     else if (router.pathname == `/subsubcategory/[subsubcategory]`) { goTo = `3rdSubcategory/details/${props.slug}` }
     else if (router.pathname == `/subsubcategory/3rdSubcategory/[subsubsubcategory]`) { goTo = `details/${props.slug}` }

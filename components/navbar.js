@@ -35,7 +35,7 @@ const NavBar = () => {
         className="p-1 font-semibold text-[#0797B7]"
         onClick={ ()=>   setOpenNav(false)}
       >
-        <Link href="/news"  className="flex items-center">
+        <Link href="/news/news"  className="flex items-center">
           News
         </Link>
       </Typography>
