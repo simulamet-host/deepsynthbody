@@ -14,8 +14,6 @@ export default function SearchAndFilter() {
         }
     }, []);
 
-
-
     const { value, setValue } = useContext(SearchContext)
     let newsRoute;
     router.pathname == "/news/news" ? newsRoute = true : false
@@ -28,25 +26,14 @@ export default function SearchAndFilter() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                     </svg>
                 </div>
-                {newsRoute ? <input className="p-4 -ml-1 pl-10 w-full h-12 text-gray-900
+                <input className="p-4 -ml-1 pl-10 w-full h-12 text-gray-900
                                   rounded-3xl border-2 border-gray-600
                 dark:placeholder-gray-400 border focus-visible:outline-none focus-visible:border-[#07849f] grow"
-                    placeholder="Search by Author, Title, Desc..."
+                    placeholder={newsRoute ? "Search by Author, Title, Desc..." : "Search ..."}
                     onChange={val => setValue(val.target.value)}
                     value={value}
                     ref={inputElement}
-                /> :
-                    <input className="p-4 -ml-1 pl-10 w-full h-12 text-gray-900
-                                  rounded-3xl border-2 border-gray-600
-                dark:placeholder-gray-400 border focus-visible:outline-none focus-visible:border-[#07849f] grow"
-                        placeholder="Search ..."
-                        onChange={val => setValue(val.target.value)}
-                        value={value}
-                        ref={inputElement}
-                    />
-                }
-
-
+                />
             </div>
         </div>
     )

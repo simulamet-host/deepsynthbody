@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState, useMemo, useEffect, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { clearLinks } from "../slices/sidebarStatus";
+import { NewsPage } from "../slices/sidebarStatus";
 import { Subcategory, Subsubcategory, BacktoModels } from "../slices/sidebarStatus";
 import whiteLogo from "./icons/whiteLogo.png";
 import Image from 'next/image'
@@ -19,17 +21,21 @@ const Sidebar = () => {
   const router = useRouter();
   useEffect(() => {
     if (window.matchMedia("(max-width: 430px)").matches) {
-      setSmallScreen(false);setToggleCollapse(true)
+      setSmallScreen(false); setToggleCollapse(true)
     } else { setSmallScreen(true); setToggleCollapse(false) }
-  }, [isSmallScreen]);
+    if (router.pathname == "/about" || router.pathname == "/form") {
+      dispatch(clearLinks())
+    }
+  }, [dispatch, isSmallScreen, router.pathname]);
   //on window resize
-  function handleResize(){
+  function handleResize() {
     if (window.matchMedia("(max-width: 430px)").matches) {
-      setSmallScreen(false);setToggleCollapse(true) 
-    } else { setSmallScreen(true); setToggleCollapse(false) } 
+      setSmallScreen(false); setToggleCollapse(true)
+    } else { setSmallScreen(true); setToggleCollapse(false) }
   }
-  if (typeof window !== "undefined"){
-  window.addEventListener('resize', handleResize)}
+  if (typeof window !== "undefined") {
+    window.addEventListener('resize', handleResize)
+  }
 
 
   const wrapperClasses = classNames(

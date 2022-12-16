@@ -6,6 +6,7 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import Link from 'next/link'
+import { useRouter } from "next/router";
 
 const NavBar = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -16,14 +17,15 @@ const NavBar = () => {
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
+  const router = useRouter();
 
   const navList = (
     <ul className="mb-4 mt-2 text-center flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
         as="li"
         variant="paragraph"
-        className="p-1 font-semibold text-[#0797B7]"
-        onClick={ ()=>   setOpenNav(false)}
+        className={router.pathname == "/" ? "px-2 py-1 font-semibold text-white border-primary bg-primary rounded-md	border-4" : "p-1 font-semibold text-[#0797B7]"}
+        onClick={() => setOpenNav(false)}
       >
         <Link href="/" className="flex items-center">
           Home
@@ -32,18 +34,18 @@ const NavBar = () => {
       <Typography
         as="li"
         variant="paragraph"
-        className="p-1 font-semibold text-[#0797B7]"
-        onClick={ ()=>   setOpenNav(false)}
+        className={router.pathname == "/news/news" ? "px-2 py-1 font-semibold text-white border-primary bg-primary rounded-md	border-4" : "p-1 font-semibold text-[#0797B7]"}
+        onClick={() => setOpenNav(false)}
       >
-        <Link href="/news/news"  className="flex items-center">
+        <Link href="/news/news" className="flex items-center">
           News
         </Link>
       </Typography>
       <Typography
         as="li"
         variant="paragraph"
-        className="p-1 font-semibold text-[#0797B7]"
-        onClick={ ()=>   setOpenNav(false)}
+        className={router.pathname == "/about" ? "px-2 py-1 font-semibold text-white border-primary bg-primary rounded-md	border-4" : "p-1 font-semibold text-[#0797B7]"}
+        onClick={() => setOpenNav(false)}
       >
         <Link href="/about" className="flex items-center">
           About
@@ -58,12 +60,12 @@ const NavBar = () => {
           Docs
         </Link>
       </Typography> */}
-   
+
       <Typography
         as="li"
         variant="paragraph"
-        className="p-1 font-semibold text-[#0797B7]"
-        onClick={ ()=>   setOpenNav(false)}
+        className={router.pathname == "/form" ? "px-2 py-1 font-semibold text-white border-primary bg-primary rounded-md	border-4" : "p-1 font-semibold text-[#0797B7]"}
+        onClick={() => setOpenNav(false)}
       >
         <Link href="/form" className="flex items-center">
           Contact Us
@@ -77,8 +79,8 @@ const NavBar = () => {
     <div className=" bg-white px-2 sm:px-4 py-2.5 shadow-lg">
       <div className="container flex items-center justify-between text-blue-gray-900">
         <Link href="/">
-          <h1 className="mr-4 cursor-pointer py-1.5 font-bold text-primary"> 
-          DeepSynthBody</h1>
+          <h1 className="mr-4 cursor-pointer py-1.5 font-bold text-primary">
+            DeepSynthBody</h1>
         </Link>
 
         <div className="hidden lg:block">{navList}</div>

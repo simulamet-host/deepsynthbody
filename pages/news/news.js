@@ -6,6 +6,8 @@ import { SearchContext } from '../../components/context/search'
 import { useContext, useState, useEffect } from 'react'
 import SearchAndFilter from '../../components/search'
 import Link from 'next/link'
+import { NewsPage } from "../../slices/sidebarStatus";
+import { useDispatch, useSelector } from "react-redux";
 
 export async function getStaticProps() {
     const files = fs.readdirSync('newsMd')
@@ -63,6 +65,11 @@ export default function News({ filesData }) {
         return tag2.toLowerCase().includes(toBeChecked.toLowerCase())
     }
     //search end
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(NewsPage())
+    })
     return (
         <SearchContext.Provider value={{ value, setValue }}>
 
