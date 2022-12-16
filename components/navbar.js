@@ -87,7 +87,7 @@ const NavBar = () => {
         <div className="hidden lg:block">{navList}</div>
         <IconButton
           variant="text"
-          className="float-right mr-3 h-7 w-7 mb-2 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          className="float-right mr-3 h-7 w-8 mb-2 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
         >
