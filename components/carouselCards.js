@@ -7,9 +7,21 @@ export default function Card(props) {
     const router = useRouter();
     const [isSmallScreen, setSmallScreen] = useState(false);
     useEffect(() => {
-        if (window.matchMedia("(max-width: 430px)").matches) {
+
+        window.addEventListener(
+            "resize",
+            () => {if (window.matchMedia("(max-width: 430px)").matches) {
             setSmallScreen(false)
         } else { setSmallScreen(true); }
+}
+
+          );
+          if (window.matchMedia("(max-width: 430px)").matches) {
+            setSmallScreen(false)
+        } else { setSmallScreen(true); }
+
+        
+
     }, [isSmallScreen]);
     return (
         <div className=' mb-10 mx-auto -mt-2 shadow-xl'>
