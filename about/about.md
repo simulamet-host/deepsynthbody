@@ -1,7 +1,7 @@
 
 # Welcome to DeepSynthBody
 
-<img align="left" src="/heroimage.png" width="420" style="margin:auto" />
+<img align="left" src="/heroimage.png" width="420" style="padding-right:35px" />
 
 A novel framework to solve data deficiency problems caused by privacy issues and time-consuming and costly medical data annotation processes.
 >[[To pip Package]](https://pypi.org/project/deepsynthbody/)
