@@ -12,7 +12,8 @@ A novel framework to solve data deficiency problems caused by privacy issues and
 * Find inter-correlations of human body organs (how one organ affect to other organs) and functions and reproduce them to produce a new model for the human body.
 
 
-<br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
 ## Additionaly, Deepsynthbody works as:
 * A repository for deep generative models used in medicine.
 * A data compression mechanism to keep big medical data sets in a small storage without any privacy concerns and space to save large amounts of the data
