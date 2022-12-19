@@ -15,7 +15,7 @@ A novel framework to solve data deficiency problems caused by privacy issues and
 * A data compression mechanism to keep big medical data sets in a small storage without any privacy concerns and space to save large amounts of the data
 
 ## Architecture of DeepSynthBody framework
-<img src="https://deepsynthbody.org/images/deepfakebody-extended-flow-v2.png" width="900" />
+<img src="/architecture.png" width="900" />
 
 ## Generative models are organized under 11 categories which may contain subcategories and subsub categories.
 1. Cardiovascular
@@ -34,7 +34,7 @@ A novel framework to solve data deficiency problems caused by privacy issues and
 
 
 ## How to contribute to Deepsynthbody as a researcher?
-<img src="https://deepsynthbody.org/images/deepfakebody-end-user-functional-flow.png" width="800" />
+<img src="/contribute.png" width="800" />
 
 ## Citation:
 ```bash
