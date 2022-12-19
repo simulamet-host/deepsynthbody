@@ -53,7 +53,7 @@ lead aVF value = lead II value - 0.5 * lead I value
 ```
 
 ## Generated DeepFake ECG
-<img src="https://deepsynthbody.org/images/ecg_fake.png" width="800" />
+<img src="/cardioImages/ecg_fake.png" width="800" />
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

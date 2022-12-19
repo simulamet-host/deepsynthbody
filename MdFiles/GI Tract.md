@@ -42,7 +42,7 @@ generate(name, result_dir, checkpoint_dir, num_img_per_tile, num_of_outputs, tru
 
 
 ## Random sample generated from deepsynthbody.digestive.gitract.generate()
-<img src="https://deepsynthbody.org/images/generated_polyps_style_gan.png" width="800" />
+<img src="/digestiveImages/generated_polyps_style_gan.png" width="800" />
 
 ### How to generate interpolated samples between random samples?
 
@@ -75,7 +75,7 @@ generate_interpolation(name, result_dir, checkpoint_dir, num_img_per_tile, num_o
 ```
 
 ### Random sample generated from deepsynthbody.digestive.gitract.generate_interpolation()
-<img src="https://deepsynthbody.org/images/deepfakebody-interpolation_samples.png" width="800" />
+<img src="/digestiveImages/interpolation_samples.png" width="800" />
 
 ### Reference for this implementation:
 

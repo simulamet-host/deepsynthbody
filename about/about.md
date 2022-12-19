@@ -1,9 +1,11 @@
 
 # Welcome to DeepSynthBody
 
->[[To pip Package]](https://pypi.org/project/deepsynthbody/)
 
 A novel framework to solve data deficiency problems caused by privacy issues and time-consuming and costly medical data annotation processes.
+>[[To pip Package]](https://pypi.org/project/deepsynthbody/)
+
+<img src="/heroImage.png" width="420" style="margin:auto" />
 
 ## Main objectives of Deepsynthbody are:
 * Overcome the privacy related limitations for medical data by producing open access deep synthetic data.
