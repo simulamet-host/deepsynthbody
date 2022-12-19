@@ -4,9 +4,14 @@ image: 'https://venturebeat.com/wp-content/uploads/2022/05/GettyImages-136168162
 link: https://www.quantamagazine.org/a-brain-inspired-chip-can-run-ai-with-far-less-energy-20221110/
 description: Synthetic data can feed data-hungry AI/ML
 category: AI
-date: October 17, 2015
+date: October 17 2015
 tag1: data science
 tag2: AI
 author: Sergey Toporov
 show: true
 ---
+
+## Generating DeepFake ECGs with 8-leads.
+
+```bash
+import deepsynthbody.cardiovascular.ecg as ecg

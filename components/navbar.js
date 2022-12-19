@@ -6,6 +6,7 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import Link from 'next/link'
+import { useRouter } from "next/router";
 
 const NavBar = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -16,39 +17,42 @@ const NavBar = () => {
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
+  const router = useRouter();
 
   const navList = (
     <ul className="mb-4 mt-2 text-center flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+              <Link href="/" className="flex items-center">
       <Typography
         as="li"
         variant="paragraph"
-        className="p-1 font-semibold text-[#0797B7]"
-        onClick={ ()=>   setOpenNav(false)}
+        className={router.pathname == "/" ? "cursor-pointer px-2 py-1 font-semibold text-white border-primary bg-primary rounded-md	border-4" : "cursor-pointer p-1 font-semibold text-[#0797B7]"}
+        onClick={() => setOpenNav(false)}
       >
-        <Link href="/" className="flex items-center">
           Home
-        </Link>
       </Typography>
+      </Link>
+      <Link href="/news/news" className="flex items-center">
       <Typography
         as="li"
         variant="paragraph"
-        className="p-1 font-semibold text-[#0797B7]"
-        onClick={ ()=>   setOpenNav(false)}
+        className={router.pathname == "/news/news" ? "cursor-pointer px-2 py-1 font-semibold text-white border-primary bg-primary rounded-md	border-4" : "cursor-pointer p-1 font-semibold text-[#0797B7]"}
+        onClick={() => setOpenNav(false)}
       >
-        <Link href="/news"  className="flex items-center">
           News
-        </Link>
       </Typography>
+      </Link>
+      <Link href="/about" className="flex items-center">
+
       <Typography
         as="li"
         variant="paragraph"
-        className="p-1 font-semibold text-[#0797B7]"
-        onClick={ ()=>   setOpenNav(false)}
+        className={router.pathname == "/about" ? "cursor-pointer px-2 py-1 font-semibold text-white border-primary bg-primary rounded-md	border-4" : "cursor-pointer p-1 font-semibold text-[#0797B7]"}
+        onClick={() => setOpenNav(false)}
       >
-        <Link href="/about" className="flex items-center">
           About
-        </Link>
       </Typography>
+      </Link>
+
       {/* <Typography
         as="li"
         variant="paragraph"
@@ -58,17 +62,16 @@ const NavBar = () => {
           Docs
         </Link>
       </Typography> */}
-   
+        <Link href="/form" className="flex items-center cursor-pointer">
       <Typography
         as="li"
         variant="paragraph"
-        className="p-1 font-semibold text-[#0797B7]"
-        onClick={ ()=>   setOpenNav(false)}
+        className={router.pathname == "/form" ? "cursor-pointer px-2 py-1 font-semibold text-white border-primary bg-primary rounded-md	border-4" : "cursor-pointer p-1 font-semibold text-[#0797B7]"}
+        onClick={() => setOpenNav(false)}
       >
-        <Link href="/form" className="flex items-center">
           Contact Us
-        </Link>
       </Typography>
+      </Link>
 
     </ul>
   );
@@ -77,14 +80,14 @@ const NavBar = () => {
     <div className=" bg-white px-2 sm:px-4 py-2.5 shadow-lg">
       <div className="container flex items-center justify-between text-blue-gray-900">
         <Link href="/">
-          <h1 className="mr-4 cursor-pointer py-1.5 font-bold text-primary"> 
-          DeepSynthBody</h1>
+          <h1 className="mr-4 cursor-pointer py-1.5 font-bold text-primary">
+            DeepSynthBody</h1>
         </Link>
 
         <div className="hidden lg:block">{navList}</div>
         <IconButton
           variant="text"
-          className="float-right mr-3 h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          className="float-right mr-3 h-7 w-7 mb-2 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
         >
@@ -92,7 +95,7 @@ const NavBar = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
-              className="h-6 w-6"
+              className="h-7 w-7"
               viewBox="0 0 24 24"
               stroke="currentColor"
               strokeWidth={2}
@@ -106,7 +109,7 @@ const NavBar = () => {
           ) : (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
+              className="h-7 w-7"
               fill="none"
               stroke="currentColor"
               strokeWidth={2}
