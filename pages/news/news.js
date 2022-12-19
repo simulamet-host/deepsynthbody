@@ -83,7 +83,7 @@ export default function News({ filesData }) {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     {filesData
                         .filter(item => item.frontmatter.show == true)
-                        .sort((a, b) => new Date(a.frontmatter.date) - new Date(b.frontmatter.date))
+                        .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
                         .filter(item => searchCard(item, value))
                         .map(props => {
                             return (
