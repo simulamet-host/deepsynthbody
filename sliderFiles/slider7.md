@@ -1,7 +1,7 @@
 ---
 buttonName: 'Reproductive'
-thumbnail: '/deepsynthbody/imagesOfCategories/Reproductive.svg'
-link: https://alihaider1998.github.io/deepsynthbody/Reproductive/
-description: Here is some decription for reproductive
+thumbnail: '/deepsynthbody/imagesOfCategories/icons with circle/circle reproductive.svg'
+link: https://simulamet-host.github.io/deepsynthbody/Reproductive/
+description: Datasets for Reproductive System are Coming Soon
 show: true
 ---

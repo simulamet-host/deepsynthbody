@@ -8,7 +8,8 @@ export default function SearchAndFilter() {
         if (window.matchMedia("(min-width: 1024px)").matches) {
             if (inputElement.current) {
                 inputElement.current.focus();
-            }          }
+            }
+        }
     }, []);
 
 

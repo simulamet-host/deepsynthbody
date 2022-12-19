@@ -18,11 +18,12 @@ const NavBar = () => {
   }, []);
 
   const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="mb-4 mt-2 text-center flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
         as="li"
         variant="paragraph"
         className="p-1 font-semibold text-[#0797B7]"
+        onClick={ ()=>   setOpenNav(false)}
       >
         <Link href="/" className="flex items-center">
           Home
@@ -32,6 +33,17 @@ const NavBar = () => {
         as="li"
         variant="paragraph"
         className="p-1 font-semibold text-[#0797B7]"
+        onClick={ ()=>   setOpenNav(false)}
+      >
+        <Link href="/news"  className="flex items-center">
+          News
+        </Link>
+      </Typography>
+      <Typography
+        as="li"
+        variant="paragraph"
+        className="p-1 font-semibold text-[#0797B7]"
+        onClick={ ()=>   setOpenNav(false)}
       >
         <Link href="/about" className="flex items-center">
           About
@@ -46,22 +58,15 @@ const NavBar = () => {
           Docs
         </Link>
       </Typography> */}
+   
       <Typography
         as="li"
         variant="paragraph"
         className="p-1 font-semibold text-[#0797B7]"
-      >
-        <Link href="/news" className="flex items-center">
-          News
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="paragraph"
-        className="p-1 font-semibold text-[#0797B7]"
+        onClick={ ()=>   setOpenNav(false)}
       >
         <Link href="/form" className="flex items-center">
-          Form
+          Contact Us
         </Link>
       </Typography>
 

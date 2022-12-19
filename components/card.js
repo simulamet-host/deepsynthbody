@@ -25,7 +25,6 @@ export default function Card(props) {
                             <img
                                 alt={props.title}
                                 src={`${props.thumbnail}`}
-                                // className="min h-5/6 m-6 p-10"
                                 className="min-h-5/6 m-6 p-5 object-fill border-2 border-cyan-500 aspect-square rounded-full w-5/6"
                             />
                         </div>

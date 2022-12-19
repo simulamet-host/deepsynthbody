@@ -17,7 +17,7 @@ A novel framework to solve data deficiency problems caused by privacy issues and
 ## Architecture of DeepSynthBody framework
 <img src="https://deepsynthbody.org/images/deepfakebody-extended-flow-v2.png" width="900" />
 
-## Generative modles are organized under 11 categories which may contain subcategories and subsub categories.
+## Generative models are organized under 11 categories which may contain subcategories and subsub categories.
 1. Cardiovascular
    - ECG model.
 2. Digestive 

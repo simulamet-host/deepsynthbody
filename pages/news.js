@@ -26,7 +26,7 @@ export default function News({ filesData }) {
 
         return (
             <main className="container mx-auto">
-                <h2 className="text-2xl font-medium text-greyish mb-4 text-center">
+                <h2 className="text-2xl font-medium text-greyish mb-4 px-1 text-center">
                     Latest Data Science News
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -35,9 +35,10 @@ export default function News({ filesData }) {
                     .map(props => {
                         return (
                             <div
-                                className="max-w-sm rounded overflow-hidden shadow-xl m-6 flex-1"
+                                className="max-w-sm rounded overflow-hidden shadow-xl m-6 flex-col flex justify-between"
                                 key={props.frontmatter.title}
                             >
+                                <div>
                                 <img
                                     className="w-full h-60 "
                                     src={`${props.frontmatter.image}`}
@@ -55,6 +56,7 @@ export default function News({ filesData }) {
                                        <br/>
                                         <a href={`${props.frontmatter.link}`}  >Read More</a>
                                     </p>
+                                </div>
                                 </div>
                                 <div className="px-6 pt-4 pb-2">
                                     <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
@@ -78,7 +80,7 @@ export default function News({ filesData }) {
                                         </p>
                                     </div>
                                 </div>
-                            </div>
+                                </div>
                         )
                     })}
             </div> 

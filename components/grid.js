@@ -7,7 +7,7 @@ const searchCategory = (item, toBeChecked) => {
         searchByCategory(item.category, toBeChecked))
 }
 const searchByCategory = (category, toBeChecked) => {
-    return category.toLowerCase().includes(toBeChecked)
+    return category.toLowerCase().includes(toBeChecked.toLowerCase())
 }
 
 

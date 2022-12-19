@@ -11,20 +11,6 @@ import SearchAndFilter from '../../components/search'
 import { useDispatch, useSelector, } from "react-redux";
 import { Subcategory, Subsubcategory, BacktoModels, clearThirdLink, levelTwoName } from "../../slices/sidebarStatus";
 
-const searchTitle = (item, toBeChecked) => {
-    return (
-        item.frontmatter.subsubcategory ? searchByTitle(item.frontmatter.title, toBeChecked) ||
-            searchBySubSubCatergory(item.frontmatter.subsubcategory, toBeChecked) :
-            searchByTitle(item.frontmatter.title, toBeChecked)
-    )
-}
-const searchByTitle = (title, toBeChecked) => {
-    return title.toLowerCase().includes(toBeChecked)
-}
-const searchBySubSubCatergory = (subsubcategory, toBeChecked) => {
-    return subsubcategory.toLowerCase().includes(toBeChecked)
-}
-
 
 export async function getStaticPaths() {
     const files = fs.readdirSync('MdFiles')
@@ -64,10 +50,10 @@ export async function getStaticProps({ params: { subsubcategory } }) {
             frontmatter,
         }
     })
-  //Reading the search heading from HeadingOrDesc/subcategory/search.md
-  const readSearchHeading = fs.readFileSync(`HeadingOrDesc/subsubcategory/search.md`, 'utf-8')
-  const { data: subcategorySearchHeading } = matter(readSearchHeading)
-  const subcategorySearchHeadingMD = subcategorySearchHeading
+    //Reading the search heading from HeadingOrDesc/subcategory/search.md
+    const readSearchHeading = fs.readFileSync(`HeadingOrDesc/subsubcategory/search.md`, 'utf-8')
+    const { data: subcategorySearchHeading } = matter(readSearchHeading)
+    const subcategorySearchHeadingMD = subcategorySearchHeading
     //Getting the subsubcategory headings
     const readsubsubCatHeading = fs.readFileSync(`HeadingOrDesc/subsubcategory/subsubCategoryHeadings.md`, 'utf-8')
     const { data: subsubcategoryHeadings } = matter(readsubsubCatHeading)
@@ -100,6 +86,29 @@ export async function getStaticProps({ params: { subsubcategory } }) {
 
 export default function SubsubCategoryPage({ filesData, subsubcategory, subcategorySearchHeadingMD,
     subsubcategoryHeadingsMD, subsubcategoryModelHeadingsMD, subsubcategoryDescMD, subsubcategoryModelDescMD }) {
+    //search start
+    const searchTitle = (item, toBeChecked) => {
+        return (
+            item.frontmatter.subsubcategory ? searchByTitle(item, toBeChecked) ||
+                searchBySubSubCatergory(item.frontmatter.subsubcategory, toBeChecked) :
+                searchByTitle(item, toBeChecked)
+        )
+    }
+    const searchByTitle = (item, toBeChecked) => {
+        if (!item.frontmatter.subsubcategory) {
+            if (item.frontmatter.title) {
+                return item.frontmatter.title.toLowerCase().includes(toBeChecked.toLowerCase()) ||
+                    item.frontmatter.category.toLowerCase().includes(toBeChecked.toLowerCase()) ||
+                    item.frontmatter.desc.toLowerCase().includes(toBeChecked.toLowerCase())
+            }
+        }
+    }
+    const searchBySubSubCatergory = (item, toBeChecked) => {
+        return item.toLowerCase().includes(toBeChecked.toLowerCase())
+    }
+    //search end
+
+    
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(levelTwoName(subsubcategory))
@@ -131,8 +140,8 @@ export default function SubsubCategoryPage({ filesData, subsubcategory, subcateg
 
             <div className="mb-12 px-1 text-center">
                 <div className='-mb-2'><h2 className="text-2xl font-medium text-greyish">
-                {subcategorySearchHeadingMD[subsubcategory]}
-                                </h2></div>
+                    {subcategorySearchHeadingMD[subsubcategory]}
+                </h2></div>
                 <SearchAndFilter />
 
             </div>
@@ -151,7 +160,7 @@ export default function SubsubCategoryPage({ filesData, subsubcategory, subcateg
                     {useRouter().query.subsubcategory} */}
                 </h1>
                 <h2 className="text-2xl font-medium text-greyish">
-                {subsubcategoryDescMD[subsubcategory]}
+                    {subsubcategoryDescMD[subsubcategory]}
                     {/* {subsubcategoryMD.SubsubcategoryDesc} */}
                 </h2>
             </div> : false}
@@ -195,7 +204,7 @@ export default function SubsubCategoryPage({ filesData, subsubcategory, subcateg
                     {useRouter().query.subsubcategory} */}
                 </h1>
                 <h2 className="text-2xl font-medium text-greyish">
-                {subsubcategoryModelDescMD[subsubcategory]}
+                    {subsubcategoryModelDescMD[subsubcategory]}
                     {/* {subsubcategoryMD.ModelsDesc} */}
                 </h2>
             </div> : false}
