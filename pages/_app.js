@@ -4,6 +4,7 @@ import '../styles/globals.css'
 import favicon from "../public/favicon.ico";
 import { store } from '../store'
 import { Provider } from 'react-redux'
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }) {
     return (
@@ -15,7 +16,20 @@ function MyApp({ Component, pageProps }) {
             <link rel="shortcut icon" href={favicon.src} type="image/x-icon" />
                 <title>DeepSynthBody</title>
             </Head>
+            <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-6QYSEKYWZ4`}
+      />
 
+      <Script id="my-script" strategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-6QYSEKYWZ4');
+                `}
+      </Script>
             <Component {...pageProps} />
 
 
