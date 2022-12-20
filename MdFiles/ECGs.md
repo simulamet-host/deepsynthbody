@@ -4,7 +4,7 @@ category: 'Cardiovascular'
 #subcategory: 'Sub Cardiovascular1'
 #subsubcategory: 'Subsub Cardiovascular1'
 desc: 'A generative model to generate deepsynth ECG images.'
-thumbnail: https://st4.depositphotos.com/38951590/41607/v/600/depositphotos_416070486-stock-illustration-heart-beat-black-background.jpg
+thumbnail: /cardioImages/ECGs.jpeg
 publication: https://ieeexplore.ieee.org/abstract/document/9462062
 show: true
 ---

@@ -4,7 +4,7 @@ category: 'Digestive'
 #subcategory: 'Sub Cardiovascular1'
 # subsubcategory: 'Subsub Cardiovascular'
 desc: 'A generative model to generate deepsynth GI tract images.'
-thumbnail: https://st.depositphotos.com/1067125/3962/v/600/depositphotos_39629227-stock-illustration-human-gastrointestinal-tract.jpg
+thumbnail: /digestiveImages/GITract.jpeg
 publication: https://ieeexplore.ieee.org/abstract/document/9462062
 show: true
 ---
