@@ -4,7 +4,7 @@ category: 'Cardiovascular'
 #subcategory: 'Sub Cardiovascular1'
 #subsubcategory: 'Subsub Cardiovascular1'
 desc: 'A generative model to generate deepsynth ECG images.'
-thumbnail: https://st4.depositphotos.com/38951590/41607/v/600/depositphotos_416070486-stock-illustration-heart-beat-black-background.jpg
+thumbnail: /cardioImages/ECGs.jpeg
 publication: https://ieeexplore.ieee.org/abstract/document/9462062
 show: true
 ---
@@ -53,7 +53,7 @@ lead aVF value = lead II value - 0.5 * lead I value
 ```
 
 ## Generated DeepFake ECG
-<img src="https://deepsynthbody.org/images/ecg_fake.png" width="800" />
+<img src="/cardioImages/ecg_fake.png" width="800" />
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

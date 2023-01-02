@@ -1,13 +1,13 @@
 ---
-Cardiovascular: /deepsynthbody/imagesOfCategories/circle cardiovascular.svg
-Digestive: /deepsynthbody/imagesOfCategories/circle digestive.svg
-Endocrine: /deepsynthbody/imagesOfCategories/circle endocrine.svg
-Integumentary: /deepsynthbody/imagesOfCategories/circle integumentary.svg
-Lymphatic: /deepsynthbody/imagesOfCategories/circle lymphatic.svg
-Muscular: /deepsynthbody/imagesOfCategories/circle muscular.svg
-Nervous: /deepsynthbody/imagesOfCategories/circle nervous.svg
-Reproductive: /deepsynthbody/imagesOfCategories/circle reproductive.svg
-Respiratory: /deepsynthbody/imagesOfCategories/circle respiratory.svg
-Skeletal: /deepsynthbody/imagesOfCategories/circle skeletal.svg
-Urinary: /deepsynthbody/imagesOfCategories/circle urinary.svg
+Cardiovascular: /imagesOfCategories/icons with circle/circle cardiovascular.svg
+Digestive: /imagesOfCategories/icons with circle/circle digestive.svg
+Endocrine: /imagesOfCategories/icons with circle/circle endocrine.svg
+Integumentary: /imagesOfCategories/icons with circle/circle integumentary.svg
+Lymphatic: /imagesOfCategories/icons with circle/circle lymphatic.svg
+Muscular: /imagesOfCategories/icons with circle/circle muscular.svg
+Nervous: /imagesOfCategories/icons with circle/circle nervous.svg
+Reproductive: /imagesOfCategories/icons with circle/circle reproductive.svg
+Respiratory: /imagesOfCategories/icons with circle/circle respiratory.svg
+Skeletal: /imagesOfCategories/icons with circle/circle skeletal.svg
+Urinary: /imagesOfCategories/icons with circle/circle urinary.svg
 ---

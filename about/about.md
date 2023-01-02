@@ -1,21 +1,25 @@
 
-# Welcome to DeepSynthBody
+# Welcome to DeepSynthBody [[pip Package]](https://pypi.org/project/deepsynthbody/)
 
->[[To pip Package]](https://pypi.org/project/deepsynthbody/)
+<img align="left" src="/heroimage.png" width="420" style="padding-right:35px" />
 
 A novel framework to solve data deficiency problems caused by privacy issues and time-consuming and costly medical data annotation processes.
+
 
 ## Main objectives of Deepsynthbody are:
 * Overcome the privacy related limitations for medical data by producing open access deep synthetic data.
 * Reduce the time-consuming and resource-consuming process of medical data labeling and annotation.
 * Find inter-correlations of human body organs (how one organ affect to other organs) and functions and reproduce them to produce a new model for the human body.
 
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
 ## Additionaly, Deepsynthbody works as:
 * A repository for deep generative models used in medicine.
 * A data compression mechanism to keep big medical data sets in a small storage without any privacy concerns and space to save large amounts of the data
 
 ## Architecture of DeepSynthBody framework
-<img src="https://deepsynthbody.org/images/deepfakebody-extended-flow-v2.png" width="900" />
+<img src="/architecture.png" width="900" />
 
 ## Generative models are organized under 11 categories which may contain subcategories and subsub categories.
 1. Cardiovascular
@@ -34,7 +38,7 @@ A novel framework to solve data deficiency problems caused by privacy issues and
 
 
 ## How to contribute to Deepsynthbody as a researcher?
-<img src="https://deepsynthbody.org/images/deepfakebody-end-user-functional-flow.png" width="800" />
+<img src="/contribute.png" width="800" />
 
 ## Citation:
 ```bash
