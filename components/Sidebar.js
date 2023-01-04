@@ -12,13 +12,15 @@ import {
   CollapsIcon,
 } from "./icons";
 
-const Sidebar = () => {
+const Sidebar = (props) => {
   const dispatch = useDispatch();
   const menuItems = useSelector((state) => state.status.value);
   const [toggleCollapse, setToggleCollapse] = useState(true);
   const [isCollapsible, setIsCollapsible] = useState(true);
   const [isSmallScreen, setSmallScreen] = useState(false);
   const router = useRouter();
+
+
   useEffect(() => {
     if (window.matchMedia("(max-width: 430px)").matches) {
       setSmallScreen(false); setToggleCollapse(true)
@@ -92,7 +94,7 @@ const Sidebar = () => {
             return (
               <div key={menu.label} >
                 <Link href={menu.link}>
-                  <a className="flex py-6  px-3 items-center w-full h-full">
+                  <a className={"flex py-6  px-3 items-center w-full h-full"}  onClick={menu.onClick}>
                     <div style={{ width: "2.5rem" }}>
                       <Icon />
                     </div>

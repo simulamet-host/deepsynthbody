@@ -11,16 +11,19 @@ import { useRouter } from "next/router";
 import { AiOutlineHome  } from 'react-icons/ai';
 import { BsChevronRight, BsChevronDoubleRight  } from 'react-icons/bs';
 import { IoPlaySkipBackSharp  } from 'react-icons/io5';
+import { useState } from "react";
+
 
 export const userSlice = createSlice({
     name: "status",
 
     initialState: {
+        
         value: [
             { id: 1, label: "Main Categories", icon: HomeIcon , link: "/" },
-            { id: 2, label: "Level 1", icon: singleArrow, link: "" },
-            { id: 3, label: "Level 2", icon: doubleArrow, link: "" },
-            { id: 4, label: "Models", icon: modelsIcon, link: "" },
+            { id: 2, label: "Level 1", icon: singleArrow, link: ""},
+            { id: 3, label: "Level 2", icon: doubleArrow, link: ""},
+            { id: 4, label: "Models", icon: modelsIcon, link: ""},
             { id: 5, label: "News", icon: modelsIcon, link: "" },
             { id: 6, label: "newsModels", icon: singleArrow, link: "" }
         ]
@@ -69,7 +72,7 @@ export const userSlice = createSlice({
         },
         levelThreeName: (state, action) => {
             state.value[3].label = action.payload;
-        }
+        },
     },
 });
 
