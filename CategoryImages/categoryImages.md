@@ -10,5 +10,5 @@ Reproductive: /imagesOfCategories/icons with circle/circle reproductive.svg
 Respiratory: /imagesOfCategories/icons with circle/circle respiratory.svg
 Skeletal: /imagesOfCategories/icons with circle/circle skeletal.svg
 Urinary: /imagesOfCategories/icons with circle/circle urinary.svg
-Genomics: /imagesOfCategories/icons with circle/circle genomic.svg
+Genomics: /imagesOfCategories/icons with circle/circle genomics.svg
 ---
