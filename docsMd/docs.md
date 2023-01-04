@@ -35,7 +35,7 @@ The [MDFiles](https://github.com/simulamet-host/deepsynthbody/tree/main/MdFiles)
 * *publication*: To insert a publication link.
 * *show*: Takes a boolean value. Set to false if you don’t want a specific post to show up when the site is generated.
 
-**Images** related to models can be uploaded to the image folders belogning to the categories under the public file.(i.e `public/cardioImages/` ) 
+**Images** related to models can be uploaded to the image folders belogning to the categories under the public file.(i.e [public/cardioImages/](https://github.com/simulamet-host/deepsynthbody/tree/main/public)) 
 
 ## 3.How to add categories and subcategories?
 
@@ -43,25 +43,25 @@ To add a category, it is sufficient to add the new category name to the front ma
 
 <img src="/docsImages/categoryFrontmatter.png" width="800" />
 
-**Images** related to categories can be written to the md file under the CategoryImages `CategoryImages/categoryImages.md` and category images can be uploaded to the `public/imagesOfCategories`.
+**Images** related to categories can be written to the md file under the CategoryImages [CategoryImages/categoryImages.md](https://github.com/simulamet-host/deepsynthbody/blob/main/CategoryImages/categoryImages.md) and category images can be uploaded to the [public/imagesOfCategories](https://github.com/simulamet-host/deepsynthbody/tree/main/public/imagesOfCategories/icons%20with%20circle).
 
 #### Subcategories of the model categories
 
-* Seperate headings for subcategories can be written in the front matter of the file `HeadingOrDesc/subcategory/subCategoryHeadings.md`. 
+* Seperate headings for subcategories can be written in the front matter of the file [HeadingOrDesc/subcategory/subCategoryHeadings.md](https://github.com/simulamet-host/deepsynthbody/blob/main/HeadingOrDesc/subcategory/subCategoryHeadings.md). 
 <img src="/docsImages/headingsordesc.png" width="800" />
 
-* Seperate descriptions for each subcategories can be written in the front matter of the file `HeadingOrDesc/subcategory/subCategoryDesc.md`. 
-* A description of the search bar can be placed at the top of the page for each subcategory by writing in the front matter of the file `HeadingOrDesc/subcategory/search.md.`.
-* Model description for each subcategory can be written in the front matter of the file `HeadingOrDesc/subcategory/modelDesc.md`. 
-* Model headings for each subcategory can be written in the front matter of the file `HeadingOrDesc/subcategory/modelsHeadings.md`. 
+* Seperate descriptions for each subcategories can be written in the front matter of the file [HeadingOrDesc/subcategory/subCategoryDesc.md](https://github.com/simulamet-host/deepsynthbody/blob/main/HeadingOrDesc/subcategory/subCategoryDesc.md). 
+* A description of the search bar can be placed at the top of the page for each subcategory by writing in the front matter of the file [HeadingOrDesc/subcategory/search.md.](https://github.com/simulamet-host/deepsynthbody/blob/main/HeadingOrDesc/subcategory/search.md).
+* Model description for each subcategory can be written in the front matter of the file [HeadingOrDesc/subcategory/modelDesc.md](https://github.com/simulamet-host/deepsynthbody/blob/main/HeadingOrDesc/subcategory/modelsDesc.md). 
+* Model headings for each subcategory can be written in the front matter of the file [HeadingOrDesc/subcategory/modelsHeadings.md](https://github.com/simulamet-host/deepsynthbody/blob/main/HeadingOrDesc/subcategory/modelsHeadings.md). 
 
 The same file structure is valid for 2nd level subcategories and 3rd level subcategories.
-* `HeadingOrDesc/subsubcategory/`
-* `HeadingOrDesc/thirdLevelOfCategories/`
+* [HeadingOrDesc/subsubcategory/](https://github.com/simulamet-host/deepsynthbody/tree/main/HeadingOrDesc/subsubcategory)
+* [HeadingOrDesc/thirdLevelOfCategories/](https://github.com/simulamet-host/deepsynthbody/tree/main/HeadingOrDesc/thirdLevelOfCategories)
 
 ## 3.How to change data on slider, footer and home page?
 
-**Slider** is a element that displays a series of images, button, description on the top of the home page. You can add slider content with a md file within the `sliderFiles` directory.
+**Slider** is a element that displays a series of images, button, description on the top of the home page. You can add slider content with a md file within the [sliderFiles](https://github.com/simulamet-host/deepsynthbody/tree/main/sliderFiles) directory.
 <img src="/docsImages/slider.png" width="800" />
 
 * *buttonName*: To insert a link that goes to the link when the button is clicked.
@@ -70,18 +70,18 @@ The same file structure is valid for 2nd level subcategories and 3rd level subca
 * *description*: To provide a description.
 * *show*: Takes a boolean value. Set to false if you don’t want a specific post to show up when the site is generated.
 
-**Footer** is the element that displays on the bottom of the home page. Footer content can be changed from  `HeadingOrDesc/home.md` file, `footer` variable of the front matter.
+**Footer** is the element that displays on the bottom of the home page. Footer content can be changed from  [HeadingOrDesc/home.md](https://github.com/simulamet-host/deepsynthbody/blob/main/HeadingOrDesc/home.md) file, `footer` variable of the front matter.
 <img src="/docsImages/homemd.png" width="800" />
 
-**Search Heading** is the title on top of the search bar. Home pages search heading can be chagned from `HeadingOrDesc/home.md` file, `SearchHeading` variable of the front matter.
+**Search Heading** is the title on top of the search bar. Home pages search heading can be chagned from [HeadingOrDesc/home.md](https://github.com/simulamet-host/deepsynthbody/blob/main/HeadingOrDesc/home.md) file, `SearchHeading` variable of the front matter.
 
 ## 4.How to add content to the about, docs, and news page?
 
-* **About page** content is in the `about/about.md` file.
-* **Docs page** content is in the `docsMd/docs.md` file.
+* **About page** content is in the [about/about.md](https://github.com/simulamet-host/deepsynthbody/tree/main/about) file.
+* **Docs page** content is in the [docsMd/docs.md](https://github.com/simulamet-host/deepsynthbody) file.
 
 * **How to add news to the news page?**    
-To add a news, please add a new md file under the `newsMd` folder. And insert the front matter variables below.
+To add a news, please add a new md file under the [newsMd](https://github.com/simulamet-host/deepsynthbody/tree/main/newsMd) folder. And insert the front matter variables below.
 
 <img src="/docsImages/newsmd.png" width="800" />
 
